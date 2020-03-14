@@ -1,0 +1,185 @@
+.text {
+  font-family: Berkshire Swash, serif;
+}
+
+#background {
+  background: linear-gradient(
+    135deg, #ffbd7f, #fff36a);
+  border: 1px solid #ffbd7f;
+}
+
+#nav-bar {
+  background: hsla(0, 0%, 75%, 25%);
+  border-radius: 5px;
+  position: fixed;
+  right: 1vw;
+  top: 7px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#nav-bar a {
+  color: #733000;
+  background: hsla(0, 0%, 65%, 30%);
+  padding: 12px 15px;
+  margin: 0px 1vw;
+  text-align: center;
+  border-radius: 7px;
+}
+
+#nav-bar a:hover {
+  animation-name: nav-hover;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;  
+}
+
+@keyframes nav-hover {
+  100% {
+    background: hsla(29, 100%, 40%, 0.3);
+  }
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto 2vh;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+#title h1 {
+  font-family: Pacifico, serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+#sub-title {
+  font-family: Pacifico, serif;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+#main {
+  background: hsla(34, 78%, 91%, 35%);
+  border-radius: 8px;
+  max-width: 680px;
+  margin: 10vh auto;
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+ul {
+  padding-right: 20px;
+}
+
+#main p {
+  text-align: center;
+}
+
+#video {
+  width: 95%;
+  display: block;
+  margin: 40px auto;
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 30px auto;
+}
+
+#submit {
+  display: block;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  border: brown 1px solid;
+  border-radius: 5px;
+  background: hsla(0, 0%, 50%, 25%);
+}
+
+#submit:hover {
+  animation-name: button-hover;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-hover {
+  100% {
+    background: hsla(29, 100%, 50%, 25%);
+  }
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 20px;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+
+@media (min-width: 1921px) {
+  #background {
+    font-size: 1.3em;
+  }
+  #title h1 {
+    font-size: 60px;
+  }
+  #nav-bar a {
+    margin: 0px 1.5vw;
+  }
+}
+
+@media (max-width: 1920px) {
+  #background {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1440px) {
+  #background {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #nav-bar {
+    right: 0.5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 30%;
+  }
+  #title h1 {
+    font-size: 40px;
+  }
+  #nav-bar {
+    right: 2vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    width: 25%;
+  }
+  #title h1 {
+    font-size: 35px;
+  }
+  #sub-title {
+    font-size: 1.5em;
+  }
+}
