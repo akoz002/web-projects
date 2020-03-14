@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'digital-clock';
+  src: url("https://bitbucket.org/alexknz/public_files/raw/269e150cd056efe6104152e7535ad5aa0bb1fa31/fonts/digital-7-mono.ttf");
+}
+#background {
+  background-color: #333333;
+  border: 1px solid #333333;
+  min-width: fit-content;
+  min-height: 97vh;
+}
+
+/* colors for the main app area */
+/* colors for buttons in the main area */
+/* hover state */
+/* colors for the timer display area */
+/* colors for buttons in the timer area */
+/* hover state */
+/* the main area */
+#main {
+  color: #bfbff2;
+  background-color: black;
+  max-width: 400px;
+  min-width: 280px;
+  margin: 5vh auto auto;
+  font-family: 'Passion One';
+  font-size: 1.5em;
+  border: 5px solid #bfbff2;
+  border-radius: 20px;
+}
+
+/* class for all buttons */
+.button, .start-reset-buttons {
+  background-color: #bfbff2;
+  font-size: 1em;
+  padding: 8px;
+  border: 4px outset #9595ea;
+  border-radius: 8px;
+}
+
+.button:hover, .start-reset-buttons:hover {
+  background-color: #e1e1f9;
+  border-color: #b7b7f1;
+}
+
+.button:active, .start-reset-buttons:active {
+  border-style: inset;
+}
+
+/* digital time displays */
+#time-left, #session-length, #break-length {
+  font-family: 'digital-clock';
+  font-size: 1.5em;
+  text-align: center;
+  margin: 2vh auto;
+}
+
+/* class for sesson/break duration update panels */
+.update-container {
+  width: 50%;
+  text-align: center;
+}
+
+/* panel for updating session duration */
+#session-update-container {
+  float: left;
+}
+
+/* panel for updating break duration */
+#break-update-container {
+  float: right;
+}
+
+/* timer display panel */
+#timer-display {
+  clear: both;
+  color: #d8c0d8;
+  width: 55%;
+  min-width: 220px;
+  margin: auto auto 11vh;
+  position: relative;
+  top: 7vh;
+  border: 3px solid #d8c0d8;
+  border-radius: 12px;
+}
+
+/* session/break label in timer display */
+#timer-label {
+  text-align: center;
+  margin: 2vh auto 0px;
+}
+
+/* container for the start/reset buttons */
+#start-reset-button-container {
+  width: fit-content;
+  margin: auto auto 4vh;
+}
+
+/* class for the start and reset buttons */
+.start-reset-buttons {
+  background-color: #d8c0d8;
+  border-color: #bb90bb;
+}
+
+.start-reset-buttons:hover {
+  background-color: #eee3ee;
+  border-color: #d0b3d0;
+}
+
+/* the start/stop button */
+#start_stop {
+  margin-right: 20px;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+@media (min-width: 1921px) {
+  #main {
+    font-size: 1.8em;
+  }
+
+  #timer-display {
+    min-width: 270px;
+  }
+}
+@media (max-width: 1920px) {
+  #main {
+    font-size: 1.5em;
+  }
+
+  #timer-display {
+    min-width: 220px;
+  }
+}
+@media (max-width: 350px) {
+  #main {
+    font-size: 1.3em;
+  }
+
+  #timer-display {
+    min-width: 203px;
+  }
+}
