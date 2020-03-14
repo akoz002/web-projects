@@ -1,0 +1,136 @@
+#background {
+  background: AliceBlue;
+  border: 1px AliceBlue solid;
+  min-height: 100vh;
+  min-width: fit-content;
+}
+
+#main {
+  font-family: Aldrich, monospace;
+}
+
+#title {
+  text-align: center;
+}
+
+/* the header at the top of both panels */
+.section-header {
+  background: lightsteelblue;
+  padding: 5px;
+  border-bottom: 3px ridge black;
+  position: relative;
+  /* these are shades of SteelBlue */
+}
+.section-header h2 {
+  text-align: center;
+  margin: 0px;
+}
+.section-header .max-button {
+  background-color: steelblue;
+  border: 4px outset #3f75a2;
+  position: absolute;
+  right: 6px;
+  top: 7px;
+  bottom: 6px;
+}
+.section-header .max-button:hover {
+  background-color: #6c9dc6;
+  border-color: #5a91bf;
+}
+
+/* the top panel holding the editor */
+#editor-section {
+  min-width: 320px;
+  max-width: 1000px;
+  width: 50%;
+  margin: auto;
+  border: 3px ridge black;
+  box-shadow: 4px 4px 3px 0px darkgray;
+}
+
+/* the editor text area */
+#editor {
+  min-height: 100px;
+  height: 35vh;
+  width: 99.45%;
+  margin: 0px;
+  font-family: 'Share Tech Mono', monospace;
+  background: darkslategray;
+  color: azure;
+}
+
+/* the bottom panel holding the preview area */
+#preview-section {
+  min-width: 380px;
+  max-width: 1200px;
+  width: 60%;
+  margin: 5vh auto 5vh;
+  border: 3px ridge black;
+  box-shadow: 5px 5px 4px 0px darkgray;
+}
+
+/* the actual preview area */
+#preview {
+  padding: 12px;
+  background: lavender;
+  color: darkslategray;
+  /* styles for the parsed markdown elements */
+}
+#preview table {
+  border-collapse: collapse;
+}
+#preview th, #preview td {
+  padding: 3px;
+}
+#preview table, #preview th, #preview td {
+  border: 2px solid black;
+}
+#preview pre, #preview code {
+  background: ghostwhite;
+}
+#preview img {
+  max-width: 95%;
+  display: block;
+  height: auto;
+  margin: 5px;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+@media (min-width: 1921px) {
+  #background {
+    font-size: 1.3em;
+  }
+
+  #editor {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1440px) {
+  #editor-section {
+    width: 60%;
+  }
+
+  #preview-section {
+    width: 70%;
+  }
+}
+@media (max-width: 1024px) {
+  #editor-section {
+    width: 70%;
+  }
+
+  #preview-section {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  #editor-section {
+    width: 80%;
+  }
+
+  #preview-section {
+    width: 90%;
+  }
+}
