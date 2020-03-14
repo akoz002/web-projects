@@ -22,3 +22,12 @@ These are purely JavaScript algorithms without a webpage; you can interact with 
 * https://akoz002.github.io/web-projects/javascript-projects/phone-validator/
 * https://akoz002.github.io/web-projects/javascript-projects/cash-register/
 * https://akoz002.github.io/web-projects/javascript-projects/orbital-period/
+
+## React Projects
+
+Projects built with React and Redux. You can view the JSX and SASS source in the `src` folder.
+* https://akoz002.github.io/web-projects/react-projects/quote-generator/
+* https://akoz002.github.io/web-projects/react-projects/markdown-previewer/
+* https://akoz002.github.io/web-projects/react-projects/drum-machine/
+* https://akoz002.github.io/web-projects/react-projects/javascript-calculator/
+* https://akoz002.github.io/web-projects/react-projects/pomodoro-clock/
