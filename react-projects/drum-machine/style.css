@@ -1,0 +1,152 @@
+#background {
+  font-family: "Metal Mania";
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  min-height: 97vh;
+  min-width: fit-content;
+}
+
+#header {
+  text-align: center;
+  color: black;
+  width: 95%;
+  margin: auto;
+}
+
+/* the main section */
+#drum-machine {
+  background-color: #737373;
+  border: 5px double black;
+  border-radius: 5%;
+  box-shadow: 3px 3px 2px 0px black;
+  padding: 25px;
+  max-width: 480px;
+  min-width: 220px;
+  margin: auto auto 5vh;
+}
+
+/* section holding the display and the drum grid */
+#drum-grid-section {
+  height: 250px;
+  position: relative;
+}
+
+/* displays the last played drum pad */
+#display {
+  color: pink;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+/* 3x3 grid of drum pads */
+#drum-grid {
+  /* anchor it to the bottom of parent container */
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  /* There are 3 grid columns and 4 column gaps,
+   * including the edge gaps.
+   * Using this approach instead of horizontal "padding",
+   * as it seems to produce strange sizing behaviour.
+   */
+  display: grid;
+  grid-template-columns: repeat(3, 22.6666666667%);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-evenly;
+  grid-row-gap: 15px;
+  padding: 30px 0px;
+}
+
+/* the clickable drum pad button */
+.drum-pad {
+  font-family: "Metal Mania";
+  font-size: 1.3em;
+  background-color: black;
+  color: pink;
+  border: 7px outset #a6a6a6;
+  border-radius: 6px;
+}
+
+.drum-pad:hover {
+  background-color: #404040;
+  border-color: #b3b3b3;
+}
+
+.drum-pad:disabled {
+  background-color: #333333;
+  color: #666666;
+  border-color: #a6a6a6;
+}
+
+/* the slider/switch input elements */
+.switch, .slider {
+  clear: both;
+  height: 55px;
+  /* description of the switch and its state */
+  /* The actual slider bar */
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) 
+     and -moz- (Firefox) to override default look) */
+}
+.switch p, .slider p {
+  float: left;
+  color: black;
+  font-weight: bold;
+}
+.switch p .state-desc, .slider p .state-desc {
+  color: pink;
+  font-weight: normal;
+}
+.switch .range-input, .slider .range-input {
+  float: right;
+  margin-top: 15px;
+  width: 10%;
+  height: 8px;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  background-color: crimson;
+  border-radius: 50%;
+}
+.switch .range-input::-webkit-slider-thumb, .slider .range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  width: 10px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+}
+.switch .range-input::-moz-range-thumb, .slider .range-input::-moz-range-thumb {
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.slider .range-input {
+  width: 50%;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+@media (min-width: 1921px) {
+  #background {
+    font-size: 1.5em;
+  }
+
+  #drum-grid-section {
+    height: 300px;
+  }
+}
+@media (max-width: 1920px) {
+  #background {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 1440px) {
+  #background {
+    font-size: 1em;
+  }
+}
