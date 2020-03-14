@@ -12,3 +12,13 @@ Simple HTML/CSS pages.
 * https://akoz002.github.io/web-projects/html-projects/survey-form/
 * https://akoz002.github.io/web-projects/html-projects/product-page/
 * https://akoz002.github.io/web-projects/html-projects/documentation-page/
+
+## JavaScript Projects
+
+These are purely JavaScript algorithms without a webpage; you can interact with them through the browser console. Please see the source files for documentation.
+* https://akoz002.github.io/web-projects/javascript-projects/palindrome-checker/
+* https://akoz002.github.io/web-projects/javascript-projects/roman-converter/
+* https://akoz002.github.io/web-projects/javascript-projects/caesars-cipher/
+* https://akoz002.github.io/web-projects/javascript-projects/phone-validator/
+* https://akoz002.github.io/web-projects/javascript-projects/cash-register/
+* https://akoz002.github.io/web-projects/javascript-projects/orbital-period/
