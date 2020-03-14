@@ -1,0 +1,459 @@
+.text {
+  font-family: Russo One, arial;
+  color: black;
+  text-align: center;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  right: 0.8vw;
+  left: 0.8vw;
+  height: 50px;
+  min-width: 280px;
+  background: aliceblue;
+  border: gray 1px solid;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navlink {
+  border: gray 1px solid;
+  text-decoration: underline;
+  color: darkslategray;
+  background: hsl(208, 100%, 91%);
+  padding: 13px 17px;
+}
+
+.navlink:hover {
+  animation-name: nav-hover;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-hover {
+  100% {
+    background: hsl(208, 100%, 85%);
+  }
+}
+
+#main {
+  background: repeating-linear-gradient(160deg,
+    hsl(148, 100%, 88%) 0px, /* green */
+    hsl(215, 100%, 82%) 500px, /* blue */
+    hsl(286, 100%, 87%) 1000px, /* purple */
+    hsl(215, 100%, 82%) 1500px, /* blue */
+    hsl(148, 100%, 88%) 2000px); /* green */
+  border: darkgray 1px solid;
+  min-width: 280px;
+}
+
+#welcome-section {
+  background: hsla(0, 0%, 75%, 30%);
+  height: 99.8vh;
+  border: darkgray 1px solid;
+}
+
+.heading {
+  color: darkslategray;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 50px;
+  margin-top: 35vh;
+}
+
+.heading h2 {
+  font-size: 36px;
+  margin-top: 20vh;
+}
+
+.heading #main-hr {
+  width: 800px;
+  height: 4px;
+  background: darkslategray;
+  border-radius: 50%;
+}
+
+.heading .section-hr {
+  width: 460px;
+  height: 3px;
+  background: darkslategray;
+  border-radius: 50%;
+}
+
+.heading .sub-section-hr {
+  width: 380px;
+  height: 2px;
+  background: darkslategray;
+  border-radius: 50%;  
+}
+
+.about-text {
+  width: 800px;
+  margin: auto;
+  text-align: justify;
+}
+
+.projects-grid {
+  width: 900px;
+  margin: 14vh auto auto;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-column-gap: 8%;
+  grid-row-gap: 14vh;
+}
+
+.project-tile {
+  text-align: justify;
+}
+
+.link-tile {
+  align-self: center;
+  background: black;
+  box-shadow: 4px 4px 4px 0 gray;
+}
+
+.link-tile:hover {
+  animation-name: link-tile-hover;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes link-tile-hover {
+  100% {
+    background: hsl(0, 0%, 22%);
+  }
+}
+
+.link-image {
+  max-width: 91%;
+  height: auto;
+  display: block;
+  margin: auto;
+  padding-top: 13px;
+}
+
+.javascript-link-image {
+  padding-top: 0px;
+  margin-top: 13px;
+  background: snow;
+}
+
+.javascript-image-container {
+  border-top: black 1px solid;
+}
+
+.link-tile-text {
+  text-decoration: none;
+  color: lightpink;
+}
+
+.link-tile p {
+  margin: auto;
+  padding: 13px;
+}
+
+#contact {
+  margin-bottom: 20vh;
+}
+
+#footer {
+  background: aliceblue;
+  border: darkgray 1px solid;
+  min-width: 280px;
+}
+
+#profile-link {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 20px;
+  width: fit-content;
+  height: 30px;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+
+@media (min-width: 1921px) {
+  #navbar {
+    right: 0.35vw;
+    left: 0.35vw;
+    height: 60px;
+  }
+  .navlink {
+    padding: 15px 30px;
+  }
+  .text {
+    font-size: 1.4em;
+  }
+  .heading h1 {
+    font-size: 60px;
+  }
+  .heading h2 {
+    font-size: 40px;
+  }
+  .about-text {
+    width: 1000px;
+  }
+  .projects-grid {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1920px) {
+  #navbar {
+    right: 0.44vw;
+    left: 0.44vw;
+    height: 50px;
+  }
+  .navlink {
+    padding: 13px 17px;
+  }
+  .text {
+    font-size: 1em;
+  }
+  .heading h1 {
+    font-size: 50px;
+  }
+  .heading h2 {
+    font-size: 36px;
+  }
+  .about-text {
+    width: 800px;
+  }
+  .projects-grid {
+    width: 900px;
+  }
+  #profile-link {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #navbar {
+    right: 0.5vw;
+    left: 0.5vw;
+  }
+}
+
+@media (max-width: 1440px) {
+  #navbar {
+    right: 0.55vw;
+    left: 0.55vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  #navbar {
+    right: 0.7vw;
+    left: 0.7vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    width: 90%;
+  }
+  .heading .sub-section-hr {
+    width: 70%;
+  }
+  #navbar {
+    right: 0.8vw;
+    left: 0.8vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .text {
+    font-size: 0.9em;
+  }
+  .heading h1 {
+    font-size: 45px;
+  }
+  .heading h2 {
+    font-size: 32px;
+  }
+  #navbar {
+    height: 45px;
+  }
+  #profile-link {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .heading #main-hr {
+    width: 90%;
+  }
+  .about-text {
+    width: 90%;
+  }
+  #navbar {
+    right: 0.9vw;
+    left: 0.9vw;
+  }
+}
+
+@media (max-width: 870px) {
+  #navbar {
+    height: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  #navbar {
+    right: 1vw;
+    left: 1vw;
+  }
+  .navlink {
+    padding: 11px 17px;
+  }
+  .text {
+    font-size: 0.8em;
+  }
+  .heading h1 {
+    font-size: 40px;
+  }
+  .heading h2 {
+    font-size: 28px;
+  }
+  #profile-link {
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 750px) {
+  #navbar {
+    right: 1.1vw;
+    left: 1.1vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .navlink {
+    font-size: 0.9em;
+  }
+  .heading h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 690px) {
+  #navbar {
+    right: 1.2vw;
+    left: 1.2vw;
+  }
+}
+
+@media (max-width: 680px) {
+  .navlink {
+    font-size: 0.9em;
+    padding: 9px 15px;
+  } 
+}
+
+@media (max-width: 660px) {
+  .navlink {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 630px) {
+  #navbar {
+    right: 1.3vw;
+    left: 1.3vw;
+  }
+}
+
+@media (max-width: 580px) {
+  #navbar {
+    right: 1.4vw;
+    left: 1.4vw;
+  }
+  .navlink {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 520px) {
+  #navbar {
+    right: 1.5vw;
+    left: 1.5vw;
+  }
+  .navlink {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading .section-hr {
+    width: 90%;
+  }
+  .heading h1 {
+    font-size: 30px;
+  }
+  .heading h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 470px) {
+  #navbar {
+    right: 1.7vw;
+    left: 1.7vw;
+  }
+  .navlink {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 430px) {
+  #navbar {
+    right: 1.9vw;
+    left: 1.9vw;
+  }
+}
+
+@media (max-width: 410px) {
+  .navlink {
+    font-size: 0.5em;
+  }
+  .heading h1 {
+    font-size: 27px;
+  }
+  .link-tile-text {
+    font-size: 0.9em;
+  }
+  #profile-link {
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  #navbar {
+    right: 2.1vw;
+    left: 2.1vw;
+  }
+}
+
+@media (max-width: 370px) {
+  .navlink {
+    padding: 6px;
+  }
+  .link-tile-text {
+    font-size: 0.7em;
+  }
+  #profile-link {
+    padding-bottom: 2px;
+  }
+}
+
+@media (max-width: 340px) {
+  #navbar {
+    right: 2.4vw;
+    left: 2.4vw;
+  }
+}
