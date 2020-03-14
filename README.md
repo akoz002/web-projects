@@ -31,3 +31,8 @@ Projects built with React and Redux. You can view the JSX and SASS source in the
 * https://akoz002.github.io/web-projects/react-projects/drum-machine/
 * https://akoz002.github.io/web-projects/react-projects/javascript-calculator/
 * https://akoz002.github.io/web-projects/react-projects/pomodoro-clock/
+
+## D3 Projects
+
+Projects built with the D3 data visualisation library.
+* https://akoz002.github.io/web-projects/d3-projects/bar-chart/
