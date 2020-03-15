@@ -165,12 +165,20 @@
   min-width: 280px;
 }
 
-#profile-link {
-  display: block;
-  margin: 30px auto;
-  padding: 15px 20px;
-  width: fit-content;
-  height: 30px;
+#footer-links {
+  max-width: 500px;
+  margin: 5vh auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-link {
+  color: black;
+  font-size: 2.5em;
+}
+
+.footer-link:hover {
+  color: gray;
 }
 
 /*************************
@@ -227,9 +235,6 @@
   .projects-grid {
     width: 900px;
   }
-  #profile-link {
-    padding-bottom: 10px;
-  }
 }
 
 @media (max-width: 1600px) {
@@ -279,9 +284,6 @@
   #navbar {
     height: 45px;
   }
-  #profile-link {
-    padding-bottom: 8px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -319,9 +321,6 @@
   }
   .heading h2 {
     font-size: 28px;
-  }
-  #profile-link {
-    padding-bottom: 6px;
   }
 }
 
@@ -427,9 +426,6 @@
   .link-tile-text {
     font-size: 0.9em;
   }
-  #profile-link {
-    padding-bottom: 4px;
-  }
 }
 
 @media (max-width: 380px) {
@@ -445,9 +441,6 @@
   }
   .link-tile-text {
     font-size: 0.7em;
-  }
-  #profile-link {
-    padding-bottom: 2px;
   }
 }
 
