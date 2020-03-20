@@ -36,3 +36,4 @@ Projects built with React and Redux. You can view the JSX and SASS source in the
 
 Projects built with the D3 data visualisation library.
 * https://akoz002.github.io/web-projects/d3-projects/bar-chart/
+* https://akoz002.github.io/web-projects/d3-projects/scatterplot/
