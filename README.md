@@ -39,3 +39,4 @@ Projects built with the D3 data visualisation library.
 * https://akoz002.github.io/web-projects/d3-projects/scatterplot/
 * https://akoz002.github.io/web-projects/d3-projects/heatmap/
 * https://akoz002.github.io/web-projects/d3-projects/choropleth/
+* https://akoz002.github.io/web-projects/d3-projects/treemap/
