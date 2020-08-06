@@ -52,3 +52,4 @@ Projects built with the D3 data visualisation library.
 Projects implemented in Node.js and Express. For further information and links to demo apps, please see the individual project repos.
 * https://github.com/akoz002/nodejs-project-timestamp
 * https://github.com/akoz002/nodejs-project-headerparser
+* https://github.com/akoz002/nodejs-project-urlshortener
