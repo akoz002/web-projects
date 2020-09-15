@@ -1,7 +1,6 @@
 # web-projects
-HTML, JavaScript, React and Node.js web projects.
 
-Hi, my name is Alex Kozlov (akoz002) and this repo contains web development projects I've implemented using HTML, CSS/SASS, JavaScript, React / Redux and Node.js / Express. These are presented in **Frontend** and **Backend** project sections below.
+Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development projects. **Frontend** projects are implemented with HTML, CSS/SASS, JavaScript, React/Redux and D3. **Backend** projects are implemented with Node.js, Express and Mongoose/MongoDB.
 
 ## Frontend Projects
 
@@ -49,7 +48,8 @@ Projects built with the D3 data visualisation library.
 
 ## Backend Projects
 
-Projects implemented in Node.js and Express. For further information and links to demo apps, please see the individual project repos.
+Projects implemented in Node.js and Express. The last three projects also use Mongoose/MongoDB. For further information and links to demo apps, please see the individual project repos.
 * https://github.com/akoz002/nodejs-project-timestamp
 * https://github.com/akoz002/nodejs-project-headerparser
 * https://github.com/akoz002/nodejs-project-urlshortener
+* https://github.com/akoz002/nodejs-project-exercisetracker
