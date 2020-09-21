@@ -48,8 +48,9 @@ Projects built with the D3 data visualisation library.
 
 ## Backend Projects
 
-Projects implemented in Node.js and Express. The last three projects also use Mongoose/MongoDB. For further information and links to demo apps, please see the individual project repos.
+Projects implemented in Node.js and Express. The "url shortener" and "exercise tracker" projects also use Mongoose/MongoDB. For further information and links to demo apps, please see the individual project repos.
 * https://github.com/akoz002/nodejs-project-timestamp
 * https://github.com/akoz002/nodejs-project-headerparser
 * https://github.com/akoz002/nodejs-project-urlshortener
 * https://github.com/akoz002/nodejs-project-exercisetracker
+* https://github.com/akoz002/nodejs-project-filemetadata
