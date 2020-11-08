@@ -1,6 +1,6 @@
 # web-projects
 
-Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development projects. **Frontend** projects are implemented with HTML, CSS/SASS, JavaScript, React/Redux and D3. **Backend** projects are implemented with Node.js, Express and Mongoose/MongoDB.
+Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development projects. **Frontend** projects are implemented with *HTML, CSS/SASS, JavaScript, React/Redux, D3*, and are built with *Parcel*. **Backend** projects are implemented with *Node.js, Express* and *Mongoose/MongoDB*.
 
 ## Frontend Projects
 
@@ -9,6 +9,15 @@ You can view my frontend portfolio page here:
 * https://akoz002.github.io/web-projects/
 
 Or you can view the individual projects in the sections below.
+
+### React Projects
+
+Projects implemented with *React* or *React/Redux*. The source for each project can be found under `react-projects/<project>/src`. The apps were built with *Parcel* and can be viewed at the links below. 
+* https://akoz002.github.io/web-projects/react-projects/quote-generator/dist/
+* https://akoz002.github.io/web-projects/react-projects/markdown-previewer/dist/
+* https://akoz002.github.io/web-projects/react-projects/drum-machine/dist/
+* https://akoz002.github.io/web-projects/react-projects/javascript-calculator/dist/
+* https://akoz002.github.io/web-projects/react-projects/pomodoro-clock/dist/
 
 ### HTML/CSS Projects
 
@@ -27,15 +36,6 @@ These are purely JavaScript algorithms without a webpage; you can interact with 
 * https://akoz002.github.io/web-projects/javascript-projects/phone-validator/
 * https://akoz002.github.io/web-projects/javascript-projects/cash-register/
 * https://akoz002.github.io/web-projects/javascript-projects/orbital-period/
-
-### React Projects
-
-Projects built with React and Redux. You can view the JSX and SASS source in the `src` folder.
-* https://akoz002.github.io/web-projects/react-projects/quote-generator/
-* https://akoz002.github.io/web-projects/react-projects/markdown-previewer/
-* https://akoz002.github.io/web-projects/react-projects/drum-machine/
-* https://akoz002.github.io/web-projects/react-projects/javascript-calculator/
-* https://akoz002.github.io/web-projects/react-projects/pomodoro-clock/
 
 ### D3 Projects
 
