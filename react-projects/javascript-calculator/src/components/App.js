@@ -19,9 +19,11 @@ const App = ({ expr, input }) => (
   </div>
 );
 
-export default connect(
+const ConnectedApp = connect(
   state => ({
     expr: state.expr,
     input: state.input
   })
 )(App);
+
+export default ConnectedApp;

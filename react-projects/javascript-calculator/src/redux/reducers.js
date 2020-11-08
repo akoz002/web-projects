@@ -1,5 +1,4 @@
 
-import { createStore } from 'redux';
 import {
   APPEND_NUMBER,
   APPEND_DECIMAL,
@@ -164,8 +163,4 @@ const rootReducer = (state = initialState, action) => {
   }
 };
 
-/*
- * Export the store.
- */
-
-export default createStore(rootReducer);
+export default rootReducer;

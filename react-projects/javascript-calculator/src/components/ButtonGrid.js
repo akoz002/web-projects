@@ -74,7 +74,7 @@ const operators = [
   }
 ];
 
-export default () => (
+const ButtonGrid = () => (
   <section id="button-grid">
     {numbers.map(button => (
       <NumberButton key={button.id}
@@ -97,3 +97,5 @@ export default () => (
       char="AC" />
   </section>
 );
+
+export default ButtonGrid;
