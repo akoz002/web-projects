@@ -23,9 +23,11 @@ const Slider = ({ desc, stateDesc, value, onChange }) => (
  * The Volume slider.
  */
 
-export default connect(
+const VolumeSlider = connect(
   null,
   dispatch => ({
     onChange: volume => dispatch(updateVolume(volume))
   })
 )(Slider);
+
+export default VolumeSlider;

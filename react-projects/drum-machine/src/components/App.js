@@ -44,7 +44,7 @@ const App = ({ drumBanks, playedDrumPad, powerOn, bankIndex, volume }) => (
  * from the state values.
  */
 
-export default connect(
+const ConnectedApp = connect(
   state => ({
     playedDrumPad: state.playedDrumPad,
     powerOn: state.powerOn,
@@ -52,3 +52,5 @@ export default connect(
     volume: state.volume
   })
 )(App);
+
+export default ConnectedApp;

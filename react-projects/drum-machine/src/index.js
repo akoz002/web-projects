@@ -15,9 +15,10 @@
 
  import React from 'react';
  import { render } from 'react-dom';
+ import { createStore } from 'redux';
  import { Provider } from 'react-redux';
  import App from './components/App';
- import store from './redux/reducers';
+ import rootReducer from './redux/reducers';
 
  /*
   * Create the drum bank arrays and render the Drum App.
@@ -129,6 +130,8 @@
      bankArray: drumBankTwoArray
    }
  ];
+
+ const store = createStore(rootReducer);
 
  render(
    <Provider store={store}>

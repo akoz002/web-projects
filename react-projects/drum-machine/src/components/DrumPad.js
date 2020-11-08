@@ -115,7 +115,7 @@ class DrumPad extends React.Component {
  * the Redux store.
  */
 
-export default connect(
+const ConnectedDrumPad = connect(
   state => ({
     powerOn: state.powerOn,
     volume: state.volume
@@ -124,3 +124,5 @@ export default connect(
     onDrumPlay: drumPadName => dispatch(updateDrumPad(drumPadName))
   })
 )(DrumPad);
+
+export default ConnectedDrumPad;

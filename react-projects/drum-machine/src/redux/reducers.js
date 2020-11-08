@@ -1,5 +1,5 @@
 
-import { combineReducers, createStore } from 'redux';
+import { combineReducers } from 'redux';
 import {
   UPDATE_DRUM_PAD,
   TOGGLE_POWER,
@@ -64,7 +64,7 @@ const volume = (state = 50, action) => {
 }
 
 /*
- * Export the store.
+ * Export the root reducer.
  */
 
 const rootReducer = combineReducers({
@@ -74,4 +74,4 @@ const rootReducer = combineReducers({
   volume
 });
 
-export default createStore(rootReducer);
+export default rootReducer;
