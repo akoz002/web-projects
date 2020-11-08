@@ -4,9 +4,9 @@ Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development p
 
 ## Frontend Projects
 
-You can view my frontend portfolio page here:
+You can view my frontend portfolio page at the link below (the source can be found at `portfolio/src`):
 
-* https://akoz002.github.io/web-projects/
+* https://akoz002.github.io/web-projects/portfolio/dist/
 
 Or you can view the individual projects in the sections below.
 
