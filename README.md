@@ -12,7 +12,7 @@ Or you can view the individual projects in the sections below.
 
 ### React Projects
 
-Projects implemented with *React* or *React/Redux*. The source for each project can be found under `react-projects/<project>/src`. The apps were built with *Parcel* and can be viewed at the links below. 
+Projects implemented with *React* or *React/Redux*. The source for each project can be found under `react-projects/<project>/src`. The apps were built with *Parcel* and can be viewed at the links below. Source maps were generated and the original source can be viewed in browser developer tools.
 * https://akoz002.github.io/web-projects/react-projects/quote-generator/dist/
 * https://akoz002.github.io/web-projects/react-projects/markdown-previewer/dist/
 * https://akoz002.github.io/web-projects/react-projects/drum-machine/dist/
