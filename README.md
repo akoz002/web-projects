@@ -1,6 +1,16 @@
 # web-projects
 
-Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development projects. **Frontend** projects are implemented with *HTML, CSS/SASS, JavaScript, React/Redux, D3*, and are built with *Parcel*. **Backend** projects are implemented with *Node.js, Express* and *Mongoose/MongoDB*.
+Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development projects. **Frontend** projects are implemented with *HTML, CSS/SASS, JavaScript, React/Redux, D3*, and are built with *Parcel*. **Backend/Fullstack** projects are implemented with *Node.js, Express, Mongoose/MongoDB* and contain *React* components at the frontend.
+
+## Backend/Fullstack Projects
+
+At the backend these projects are implemented in *Node.js* and *Express*; the first two projects also use *Mongoose/MongoDB*. At the frontend these projects contain *React* or *React/Redux* components for posting and getting data from the backend. In each project repo the server source can be found in `server.js` and React source can be found in `views/src/`. The frontend components were built with *Parcel*. Source maps were generated and the original source can be viewed in browser developer tools. For further information and links to demo apps, please see the individual project repos below.
+
+* https://github.com/akoz002/nodejs-project-exercisetracker
+* https://github.com/akoz002/nodejs-project-urlshortener
+* https://github.com/akoz002/nodejs-project-filemetadata
+* https://github.com/akoz002/nodejs-project-timestamp
+* https://github.com/akoz002/nodejs-project-headerparser
 
 ## Frontend Projects
 
@@ -12,12 +22,13 @@ Or you can view the individual projects in the sections below.
 
 ### React Projects
 
-Projects implemented with *React* or *React/Redux*. The source for each project can be found under `react-projects/<project>/src`. The apps were built with *Parcel* and can be viewed at the links below. Source maps were generated and the original source can be viewed in browser developer tools.
-* https://akoz002.github.io/web-projects/react-projects/quote-generator/dist/
+Frontend projects implemented with *React* or *React/Redux*. The source for each project can be found under `react-projects/<project>/src`. The apps were built with *Parcel* and can be viewed at the links below. Source maps were generated and the original source can be viewed in browser developer tools.
+
 * https://akoz002.github.io/web-projects/react-projects/markdown-previewer/dist/
 * https://akoz002.github.io/web-projects/react-projects/drum-machine/dist/
 * https://akoz002.github.io/web-projects/react-projects/javascript-calculator/dist/
 * https://akoz002.github.io/web-projects/react-projects/pomodoro-clock/dist/
+* https://akoz002.github.io/web-projects/react-projects/quote-generator/dist/
 
 ### HTML/CSS Projects
 
@@ -45,12 +56,3 @@ Projects built with the D3 data visualisation library.
 * https://akoz002.github.io/web-projects/d3-projects/heatmap/
 * https://akoz002.github.io/web-projects/d3-projects/choropleth/
 * https://akoz002.github.io/web-projects/d3-projects/treemap/
-
-## Backend Projects
-
-Projects implemented in Node.js and Express. The "url shortener" and "exercise tracker" projects also use Mongoose/MongoDB. At the frontend these projects also contain React components for posting and getting data from the backend. For further information and links to demo apps, please see the individual project repos.
-* https://github.com/akoz002/nodejs-project-timestamp
-* https://github.com/akoz002/nodejs-project-headerparser
-* https://github.com/akoz002/nodejs-project-urlshortener
-* https://github.com/akoz002/nodejs-project-exercisetracker
-* https://github.com/akoz002/nodejs-project-filemetadata
