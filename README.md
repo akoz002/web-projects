@@ -4,7 +4,7 @@ Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development p
 
 ## Backend/Fullstack Projects
 
-At the backend these projects are implemented in *Node.js* and *Express*; the first two projects also use *Mongoose/MongoDB*. At the frontend these projects contain *React* or *React/Redux* components for posting and getting data from the backend. In each project repo the server source can be found in `server.js` and React source can be found in `views/src/`. The frontend components were built with *Parcel*. Source maps were generated and the original source can be viewed in browser developer tools. For further information and links to demo apps, please see the individual project repos below.
+At the backend these projects are implemented in *Node.js* and *Express*; the first two projects also use *Mongoose/MongoDB*. At the frontend these projects contain *React* or *React/Redux* components for posting and getting data from the backend. In each project repo the server source can be found in `server.js` and React source can be found in `views/src/`. The frontend components were built with *Parcel*. Source maps were generated and the original source can be viewed in browser developer tools. For further information and links to demo apps, please see the individual project repos below. Please note that these apps are hosted on Heroku and hibernate while inactive; they may take a few seconds to start up when first opened.
 
 * https://github.com/akoz002/nodejs-project-exercisetracker
 * https://github.com/akoz002/nodejs-project-urlshortener
