@@ -1,0 +1,49 @@
+
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #222;
+	background-color: #FaFaFa;
+}
+
+body {
+	text-align: justify;
+	max-width: 700px;
+	margin: 1rem auto;
+}
+
+h1, h2, footer {
+	text-align: center;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+p, li {
+	line-height: 1.4rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+footer {
+	margin-top: 3rem;
+}
+
+code {
+  font-family: monospace;
+  padding: 2px;
+  color: black;
+  background-color: #fff;
+}
+
+a {
+	color: #2574A9;
+}
+
+.code-block {
+	background-color: white;
+	padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+}
