@@ -1,12 +1,3 @@
-/*
- * freeCodeCamp JavaScript Algorithms and Data Structures Certification
- * Project 2: Roman Numeral Converter
- * Alex Kozlov, 2019
- *
- * Converts the given decimal number into a Roman Numeral.
- */
-
-"use strict";
 
 /*
  * Define a data structure to contain the Roman symbols
@@ -20,8 +11,8 @@ const X = { symbol: "X", next: L, value: 10 };
 const V = { symbol: "V", next: X, value: 5 };
 const I = { symbol: "I", next: V, value: 1 };
 const ROMAN_SYMBOLS = {
-  1: I, 
-  10: X, 
+  1: I,
+  10: X,
   100: C,
   1000: M };
 
@@ -44,9 +35,9 @@ function _convertToRomanInOrderOfMag(orderOfMag, value) {
   let diff = value;
 
   if (value >= minSymbol.value * 5) {
-    /* 
+    /*
      * The value is over the halfway point in the range
-     * i.e. >= 5, 50, or 500 
+     * i.e. >= 5, 50, or 500
      */
     currentSymbol = minSymbol.next;
     romanStr = currentSymbol.symbol;
@@ -90,7 +81,7 @@ function _getRomanNumerals(orderOfMag, num) {
  * @param {number} num A positive integer in the range [1 - 3999]
  * @return {string} A string representing the Roman Numeral.
  */
-function convertToRoman(num) {
+export default function convertToRoman(num) {
   let romanStr = "";
   let value = num;
   // split 'num' into its "order of magnitude" components
@@ -102,16 +93,3 @@ function convertToRoman(num) {
 
   return romanStr;
 }
-
-/***  Usage Examples  ***/
-
-console.log(convertToRoman(1));
-console.log(convertToRoman(2));
-console.log(convertToRoman(3));
-console.log(convertToRoman(29));
-console.log(convertToRoman(97));
-console.log(convertToRoman(649));
-console.log(convertToRoman(891));
-console.log(convertToRoman(1023));
-console.log(convertToRoman(2014));
-console.log(convertToRoman(3999));
