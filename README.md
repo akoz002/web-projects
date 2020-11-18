@@ -4,7 +4,7 @@ Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development p
 
 ## Backend/Fullstack Projects
 
-At the backend these projects are implemented in *Node.js* and *Express*; the first two projects also use *Mongoose/MongoDB*. At the frontend these projects contain *React* or *React/Redux* components for posting and getting data from the backend. In each project repo the server source can be found in `server.js` and React source can be found in `views/src/`. The frontend components were built with *Parcel*, and the original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab). For further information and links to demo apps, please see the individual project repos below. Please note that these apps are hosted on Heroku and hibernate while inactive; they may take a few seconds to start up when first opened.
+At the backend these projects are implemented in *Node.js* and *Express*; the first two also use *Mongoose/MongoDB*. At the frontend these projects contain *React* or *React/Redux* components for posting and getting data from the backend. In each repo below the server source can be found in `server.js` and React source can be found in `views/src/`. The frontend components were built with *Parcel*, and the original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab). For further information and links to demos, please see the individual repos below. Please note that these apps are hosted on Heroku and hibernate while inactive; they may take a few seconds to start up when first opened.
 
 * https://github.com/akoz002/nodejs-project-exercisetracker
 * https://github.com/akoz002/nodejs-project-urlshortener
@@ -18,11 +18,11 @@ You can view my frontend portfolio page at the link below (the source can be fou
 
 * https://akoz002.github.io/web-projects/portfolio/dist/
 
-Or you can view the individual projects in the sections below. The apps were built with *Parcel* and can be viewed at the links below. The original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab).
+Or you can view the individual projects in the sections below. The apps were built with *Parcel* and the original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab).
 
-### React Projects
+### React Apps
 
-Interactive web apps implemented with *React* or *React/Redux*. The source for each project can be found under `react-projects/<project>/src`. 
+Interactive web apps implemented with *React* or *React/Redux*. The source can be found under `react-projects/<project>/src`. 
 
 * https://akoz002.github.io/web-projects/react-projects/markdown-previewer/dist/
 * https://akoz002.github.io/web-projects/react-projects/drum-machine/dist/
@@ -30,9 +30,9 @@ Interactive web apps implemented with *React* or *React/Redux*. The source for e
 * https://akoz002.github.io/web-projects/react-projects/pomodoro-clock/dist/
 * https://akoz002.github.io/web-projects/react-projects/quote-generator/dist/
 
-### D3 Projects
+### D3 Plots
 
-Interactive data plots implemented with the *D3* data visualisation library. The source for each project can be found under `d3-projects/<project>/src`.
+Interactive data plots implemented with the *D3* data visualisation library. The source can be found under `d3-projects/<project>/src`.
 
 * https://akoz002.github.io/web-projects/d3-projects/treemap/dist/
 * https://akoz002.github.io/web-projects/d3-projects/choropleth/dist/
@@ -40,20 +40,22 @@ Interactive data plots implemented with the *D3* data visualisation library. The
 * https://akoz002.github.io/web-projects/d3-projects/scatterplot/dist/
 * https://akoz002.github.io/web-projects/d3-projects/bar-chart/dist/
 
-### HTML/CSS Projects
+### JavaScript Algorithms
 
-Simple HTML/CSS pages.
+Pure JavaScript algorithms that can be interacted with through the browser console. The source can be found under `javascript-projects/<project>/src`.
+
+* https://akoz002.github.io/web-projects/javascript-projects/cash-register/dist/
+* https://akoz002.github.io/web-projects/javascript-projects/roman-converter/dist/
+* https://akoz002.github.io/web-projects/javascript-projects/phone-validator/dist/
+* https://akoz002.github.io/web-projects/javascript-projects/caesars-cipher/dist/
+* https://akoz002.github.io/web-projects/javascript-projects/palindrome-checker/dist/
+* https://akoz002.github.io/web-projects/javascript-projects/orbital-period/dist/
+
+### HTML/CSS Pages
+
+Pure HTML/CSS pages.
+
 * https://akoz002.github.io/web-projects/html-projects/tribute-page/
 * https://akoz002.github.io/web-projects/html-projects/survey-form/
 * https://akoz002.github.io/web-projects/html-projects/product-page/
 * https://akoz002.github.io/web-projects/html-projects/documentation-page/
-
-### JavaScript Projects
-
-These are purely JavaScript algorithms without a webpage; you can interact with them through the browser console. Please see the source files for documentation.
-* https://akoz002.github.io/web-projects/javascript-projects/palindrome-checker/
-* https://akoz002.github.io/web-projects/javascript-projects/roman-converter/
-* https://akoz002.github.io/web-projects/javascript-projects/caesars-cipher/
-* https://akoz002.github.io/web-projects/javascript-projects/phone-validator/
-* https://akoz002.github.io/web-projects/javascript-projects/cash-register/
-* https://akoz002.github.io/web-projects/javascript-projects/orbital-period/
