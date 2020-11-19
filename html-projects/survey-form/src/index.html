@@ -4,36 +4,41 @@
   <meta charset="UTF-8">
   <title>Survey Form</title>
   <link href="https://fonts.googleapis.com/css?family=Alatsi" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-<div id="background">  
+<div id="background">
   <header class="text">
     <h1 id="title">Heavy Metal Music Survey Form</h1>
-    <p id="description">This is a survey about heavy metal music.<br> If you don't like heavy metal music, you probably shouldn't take this survey.</p>
+    <p id="description">
+      This is a survey about heavy metal music.<br> If you don't like heavy metal
+      music, you probably shouldn't take this survey.
+    </p>
   </header>
 
   <main class="text">
     <form id="survey-form">
       <label for="name" id="name-label">Name</label><br>
-      <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
-      
+      <input type="text" id="name" name="name" required placeholder="Your Name">
+      <br><br>
+
       <label for="email" id="email-label">Email</label><br>
-      <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
-      
+      <input type="email" id="email" name="email" required placeholder="Your Email">
+      <br><br>
+
       <label for="number" id="number-label">How many heavy metal albums do you own?</label><br>
-      <input type="number" id="number" name="albums" min="1" max="666" placeholder="Albums"><br><br>
-      
+      <input type="number" id="number" name="albums" min="1" max="666" placeholder="Albums">
+      <br><br>
+
       <label for="dropdown">What best describes your Heavy Metal fan status?</label><br>
       <select id="dropdown" name="fan">
         <option value="noob">Metal Noob - I listen to it little.</option>
         <option value="adept">Metal Adept - I listen to it a lot.</option>
         <option value="maniac">Metal Maniac - I listen to nothing but. </option>
-      </select><br><br>
-      
+      </select>
+      <br><br>
+
       <label>What is your favourite part of Heavy Metal music?</label><br>
       <input type="radio" name="favourite" value="lead" id="fav-lead">
       <label for="fav-lead">Lead Guitars</label><br>
@@ -46,8 +51,9 @@
       <input type="radio" name="favourite" value="bass" id="fav-bass">
       <label for="fav-bass">Bass</label><br>
       <input type="radio" name="favourite" value="all" id="fav-all">
-      <label for"fav-all">All of the above</label><br><br>
-      
+      <label for"fav-all">All of the above</label>
+      <br><br>
+
       <label>What are your favourite heavy metal bands?</label><br>
       <input type="checkbox" name="bands" value="blind-guardian" id="blind-guardian">
       <label for="blind-guardian">Blind Guardian</label><br>
@@ -76,15 +82,16 @@
       <input type="checkbox" name="bands" value="slayer" id="slayer">
       <label for="slayer">Slayer</label><br>
       <input type="checkbox" name="bands" value="megadeth" id="megadeth">
-      <label for="megadeth">Megadeth</label><br><br>
-      
+      <label for="megadeth">Megadeth</label>
+      <br><br>
+
       <label>Do you have any further comments?</label><br>
-      <textarea name="comments" id="comments"></textarea><br><br>
-      
+      <textarea name="comments" id="comments"></textarea>
+      <br><br>
+
       <button type="submit" id="submit"><strong>Submit</strong></button>
     </form>
   </main>
 </div>
-
 </body>
 </html>
