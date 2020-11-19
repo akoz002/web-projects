@@ -15,7 +15,7 @@ window.convertToRoman = convertToRoman;
 /***  Usage Examples  ***/
 
 function printConvertToRoman(decimal) {
-  console.log(`convertToRoman(${decimal}) => ` + convertToRoman(decimal));
+  console.log(`convertToRoman(${decimal}); // ` + convertToRoman(decimal));
 }
 
 printConvertToRoman(1);

@@ -24,19 +24,22 @@ window.palindrome = palindrome;
 
 /***  Usage Examples  ***/
 
-console.log('palindrome("eye") => ' + palindrome("eye")); // true
+function printPalindrome(str) {
+  console.log(`palindrome(${str}); // ` + palindrome(str));
+}
 
-console.log('palindrome("racecar") => ' + palindrome("racecar")); // true
-console.log('palindrome("RaceCar") => ' + palindrome("RaceCar")); // true
-console.log('palindrome("race CAR") => ' + palindrome("race CAR")); // true
+console.log('Palindromes:');
+printPalindrome("eye"); // true
+printPalindrome("racecar"); // true
+printPalindrome("RaceCar"); // true
+printPalindrome("race CAR"); // true
+printPalindrome("2A3*3a2"); // true
+printPalindrome("2A3 3a2"); // true
+printPalindrome("2_A3*3#A2"); // true
 
-console.log('palindrome("2A3*3a2") => ' + palindrome("2A3*3a2")); // true
-console.log('palindrome("2A3 3a2") => ' + palindrome("2A3 3a2")); // true
-console.log('palindrome("2_A3*3#A2") => ' + palindrome("2_A3*3#A2")); // true
-
-console.log('\n');
-console.log('palindrome("blizzard") => ' + palindrome("blizzard")); // false
-console.log('palindrome("fireball") => ' + palindrome("fireball")); // false
-console.log('palindrome("wind") => ' + palindrome("wind")); // false
-console.log('palindrome("ice") => ' + palindrome("ice")); // false
-console.log('palindrome("no") => ' + palindrome("no")); // false
+console.log('\nNon-palindromes:');
+printPalindrome("blizzard"); // false
+printPalindrome("fireball"); // false
+printPalindrome("wind"); // false
+printPalindrome("ice"); // false
+printPalindrome("no"); // false

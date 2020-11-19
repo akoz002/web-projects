@@ -26,7 +26,7 @@ window.telephoneCheck = telephoneCheck;
 /***  Usage Examples  ***/
 
 function printTelephoneCheck(str) {
-  console.log(`telephoneCheck(${str}) => ` + telephoneCheck(str));
+  console.log(`telephoneCheck(${str}); // ` + telephoneCheck(str));
 }
 
 // valid phone numbers

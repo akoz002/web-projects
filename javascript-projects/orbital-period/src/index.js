@@ -35,29 +35,26 @@ window.orbitalPeriodDays = orbitalPeriodDays;
 
 /***  Usage Examples  ***/
 
-console.log('orbitalPeriod([{ name : "sputnik", avgAlt : 35873.5553 }])');
-console.log(' * Returns * ');
+console.log('orbitalPeriod([{ name : "sputnik", avgAlt : 35873.5553 }]);');
+console.log('// Returns:');
 console.log(orbitalPeriod([{ name : "sputnik", avgAlt : 35873.5553 }]));
-console.log('------------------------------------------');
 
 console.log('orbitalPeriod([\n' +
   '  { name: "iss", avgAlt: 413.6 },\n' +
   '  { name: "hubble", avgAlt: 556.7 },\n' +
   '  { name: "moon", avgAlt: 378632.553 }\n' +
-  '])');
-console.log(' * Returns * ');
+  ']);');
+console.log('// Returns:');
 console.log(orbitalPeriod([
   { name: "iss", avgAlt: 413.6 },
   { name: "hubble", avgAlt: 556.7 },
   { name: "moon", avgAlt: 378632.553 }
 ]));
-console.log('------------------------------------------');
 
-console.log('orbitalPeriodHours([{ name : "sputnik", avgAlt : 35873.5553 }])');
-console.log(' * Returns * ');
+console.log('orbitalPeriodHours([{ name : "sputnik", avgAlt : 35873.5553 }]);');
+console.log('// Returns:');
 console.log(orbitalPeriodHours([{ name : "sputnik", avgAlt : 35873.5553 }]));
-console.log('------------------------------------------');
 
-console.log('orbitalPeriodDays([{ name: "moon", avgAlt: 378632.553 }])');
-console.log(' * Returns * ');
+console.log('orbitalPeriodDays([{ name: "moon", avgAlt: 378632.553 }]);');
+console.log('// Returns:');
 console.log(orbitalPeriodDays([{ name: "moon", avgAlt: 378632.553 }]));

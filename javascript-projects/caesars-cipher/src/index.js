@@ -22,7 +22,7 @@ window.rot13 = rot13;
 /***  Usage Examples  ***/
 
 function printRot13(str) {
-  console.log(`rot13(${str}) => ` + rot13(str));
+  console.log(`rot13(${str}); // ` + rot13(str));
 }
 
 printRot13("LBH QVQ VG!");

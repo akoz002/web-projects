@@ -49,10 +49,9 @@ window.checkCashRegister = checkCashRegister;
 function printCheckCashRegister(...args) {
   console.log('checkCashRegister(');
   console.log(...args);
-  console.log(')');
-  console.log(' * Returns * ');
+  console.log(');');
+  console.log('// Returns:');
   console.log(checkCashRegister(...args));
-  console.log('-----------------------------------');
 }
 
 printCheckCashRegister(19.5, 20,
