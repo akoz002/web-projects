@@ -53,9 +53,9 @@ Pure JavaScript algorithms that can be interacted with through the browser conso
 
 ### HTML/CSS Pages
 
-Pure HTML/CSS pages.
+Pure HTML/CSS pages. The source can be found under `html-projects/<project>/src`.
 
-* https://akoz002.github.io/web-projects/html-projects/tribute-page/
-* https://akoz002.github.io/web-projects/html-projects/survey-form/
-* https://akoz002.github.io/web-projects/html-projects/product-page/
-* https://akoz002.github.io/web-projects/html-projects/documentation-page/
+* https://akoz002.github.io/web-projects/html-projects/documentation-page/dist/
+* https://akoz002.github.io/web-projects/html-projects/product-page/dist/
+* https://akoz002.github.io/web-projects/html-projects/tribute-page/dist/
+* https://akoz002.github.io/web-projects/html-projects/survey-form/dist/
