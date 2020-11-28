@@ -1,183 +1,232 @@
-.text {
-  font-family: Russo One, arial;
-  color: black;
-  text-align: center;
+
+/* Variables. */
+:root {
+  --heading-color: darkslategray;
+  --nav-background: aliceblue;
+  --background-green: hsl(148, 80%, 88%);
+  --background-blue: hsl(215, 80%, 88%);
+  --background-purple: hsl(286, 80%, 88%);
+  --border: 1px solid slategray;
 }
 
-#navbar {
+html {
+  font-family: Russo One, arial;
+  font-size: 16px;
+  color: black;
+  background: repeating-linear-gradient(160deg,
+    var(--background-green) 0px,
+    var(--background-blue) 500px,
+    var(--background-purple) 1000px,
+    var(--background-blue) 1500px,
+    var(--background-green) 2000px);
+  text-align: justify;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+/* The navbar at the top. */
+nav {
   position: fixed;
-  top: 0px;
-  right: 0.8vw;
-  left: 0.8vw;
-  height: 50px;
-  min-width: 280px;
-  background: aliceblue;
-  border: gray 1px solid;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--nav-background);
+  border: var(--border);
   display: flex;
   justify-content: flex-end;
 }
 
-.navlink {
-  border: gray 1px solid;
-  text-decoration: underline;
-  color: darkslategray;
-  background: hsl(208, 100%, 91%);
-  padding: 13px 17px;
+/* Individual elements in the navbar. */
+a.navlink {
+  display: block;
+  text-decoration: none;
+  color: var(--heading-color);
+  background-color: var(--nav-background);
+  padding: 1.2rem;
 }
 
-.navlink:hover {
-  animation-name: nav-hover;
-  animation-duration: 100ms;
-  animation-fill-mode: forwards;
+a.navlink:hover {
+  background-color: hsl(208, 100%, 91%);
 }
 
-@keyframes nav-hover {
-  100% {
-    background: hsl(208, 100%, 85%);
-  }
+/* The <div> containing the dropdown menu and button. */
+div.drop-down-container {
+  position: relative;
 }
 
-#main {
-  background: repeating-linear-gradient(160deg,
-    hsl(148, 100%, 88%) 0px, /* green */
-    hsl(215, 100%, 82%) 500px, /* blue */
-    hsl(286, 100%, 87%) 1000px, /* purple */
-    hsl(215, 100%, 82%) 1500px, /* blue */
-    hsl(148, 100%, 88%) 2000px); /* green */
-  border: darkgray 1px solid;
-  min-width: 280px;
+/* The <div> containing the actual dropdown menu. */
+div.drop-down-menu {
+  position: absolute;
+  width: 100%;
+  text-align: start;
+  border-left: var(--border);
+  border-bottom: var(--border);
+  border-right: var(--border);
+  display: none;
 }
 
-#welcome-section {
-  background: hsla(0, 0%, 75%, 30%);
-  height: 99.8vh;
-  border: darkgray 1px solid;
+/* Toggle dropdown menu display on hover. */
+div.drop-down-container:hover div.drop-down-menu {
+  display: block;
 }
 
-.heading {
-  color: darkslategray;
+/* The main content including page header and sections. */
+main {
+  border: var(--border);
+}
+
+/* The page header. */
+header {
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 30vh;
+}
+
+/* Header subtitle. */
+header p {
+  font-size: 1.2rem;
   text-align: center;
 }
 
-.heading h1 {
-  font-size: 50px;
-  margin-top: 35vh;
+h1, h2, h3 {
+  color: var(--heading-color);
+  text-align: center;
 }
 
-.heading h2 {
-  font-size: 36px;
-  margin-top: 20vh;
+h1 {
+  font-size: 3rem;
 }
 
-.heading #main-hr {
-  width: 800px;
-  height: 4px;
-  background: darkslategray;
+h2 {
+  font-size: 2.1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+hr {
+  border: none;
   border-radius: 50%;
+  background-color: var(--heading-color);
 }
 
-.heading .section-hr {
-  width: 460px;
-  height: 3px;
-  background: darkslategray;
-  border-radius: 50%;
+/* <hr> under the <h1> heading. */
+hr.h1-hr {
+  width: 90%;
+  max-width: 800px;
+  height: 0.25rem;
 }
 
-.heading .sub-section-hr {
-  width: 380px;
-  height: 2px;
-  background: darkslategray;
-  border-radius: 50%;  
+/* <hr> under an <h2> heading. */
+hr.h2-hr {
+  width: 80%;
+  max-width: 460px;
+  height: 0.2rem;
 }
 
-.about-text {
-  width: 800px;
+/* <hr> under an <h3> heading. */
+hr.h3-hr {
+  width: 80%;
+  max-width: 380px;
+  height: 0.15rem;
+}
+
+/* Each main section. */
+section {
+  margin: 15vh 0;
+}
+
+/* Description at the start of each section. */
+div.section-desc {
+  width: 85%;
+  max-width: 800px;
   margin: auto;
-  text-align: justify;
 }
 
-.projects-grid {
-  width: 900px;
-  margin: 14vh auto auto;
+/* Grid showing different projects. */
+div.projects-grid {
+  width: 90%;
+  max-width: 900px;
+  margin: 10vh auto;
   display: grid;
-  grid-template-columns: 60% 30%;
+  grid-template-columns: 64% 28%;
   grid-column-gap: 8%;
-  grid-row-gap: 14vh;
+  grid-row-gap: 10vh;
 }
 
-.project-tile {
-  text-align: justify;
+/* Grid tile containing the project information. */
+div.info-tile ul {
+  padding-left: 1rem;
 }
 
-.link-tile {
+div.info-tile ul li {
+  margin: 1rem 0;
+}
+
+/* Grid tile containing the project link. */
+div.link-tile {
   align-self: center;
-  background: black;
-  box-shadow: 4px 4px 4px 0 gray;
+  background-color: black;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0 slategray;
+  border-radius: 3%;
 }
 
-.link-tile:hover {
-  animation-name: link-tile-hover;
-  animation-duration: 100ms;
-  animation-fill-mode: forwards;
+div.link-tile:hover {
+  background-color: hsl(0, 0%, 22%);
 }
 
-@keyframes link-tile-hover {
-  100% {
-    background: hsl(0, 0%, 22%);
-  }
+/* The <a> element in a link tile. */
+div.link-tile a {
+  color: lightblue;
 }
 
-.link-image {
-  max-width: 91%;
-  height: auto;
+/* The <img> element in a link tile. */
+img.link-tile-image {
+  width: 80%;
   display: block;
-  margin: auto;
-  padding-top: 13px;
+  padding: 10% 10% 0;
 }
 
-.javascript-link-image {
-  padding-top: 0px;
-  margin-top: 13px;
-  background: snow;
+/* The <p> element in a link tile. */
+p.link-tile-text {
+  text-align: center;
+  margin: 0;
+  padding: 8% 10% 10%;
 }
 
-.javascript-image-container {
-  border-top: black 1px solid;
-}
-
-.link-tile-text {
-  text-decoration: none;
-  color: lightpink;
-}
-
-.link-tile p {
-  margin: auto;
-  padding: 13px;
-}
-
-#contact {
+/* The contact section. */
+section#contact {
   margin-bottom: 20vh;
+  text-align: center;
 }
 
-#footer {
-  background: aliceblue;
-  border: darkgray 1px solid;
-  min-width: 280px;
+/* The page footer. */
+footer {
+  background-color: var(--nav-background);
+  border-top: var(--border);
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
-#footer-links {
-  max-width: 500px;
-  margin: 5vh auto;
+/* Flex container for the footer links. */
+div#footer-links {
+  max-width: 400px;
+  font-size: 2rem;
+  padding: 1em 0;
+  margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
 
-.footer-link {
+a.footer-link {
   color: black;
-  font-size: 2.5em;
 }
 
-.footer-link:hover {
+a.footer-link:hover {
   color: gray;
 }
 
@@ -185,268 +234,27 @@
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1921px) {
-  #navbar {
-    right: 0.35vw;
-    left: 0.35vw;
-    height: 60px;
+@media (max-width: 540px) {
+  html {
+    font-size: 14px;
   }
-  .navlink {
-    padding: 15px 30px;
-  }
-  .text {
-    font-size: 1.4em;
-  }
-  .heading h1 {
-    font-size: 60px;
-  }
-  .heading h2 {
-    font-size: 40px;
-  }
-  .about-text {
-    width: 1000px;
-  }
-  .projects-grid {
-    width: 1200px;
-  }
-}
-
-@media (max-width: 1920px) {
-  #navbar {
-    right: 0.44vw;
-    left: 0.44vw;
-    height: 50px;
-  }
-  .navlink {
-    padding: 13px 17px;
-  }
-  .text {
-    font-size: 1em;
-  }
-  .heading h1 {
-    font-size: 50px;
-  }
-  .heading h2 {
-    font-size: 36px;
-  }
-  .about-text {
-    width: 800px;
-  }
-  .projects-grid {
-    width: 900px;
-  }
-}
-
-@media (max-width: 1600px) {
-  #navbar {
-    right: 0.5vw;
-    left: 0.5vw;
-  }
-}
-
-@media (max-width: 1440px) {
-  #navbar {
-    right: 0.55vw;
-    left: 0.55vw;
-  }
-}
-
-@media (max-width: 1200px) {
-  #navbar {
-    right: 0.7vw;
-    left: 0.7vw;
-  }
-}
-
-@media (max-width: 1024px) {
-  .projects-grid {
-    width: 90%;
-  }
-  .heading .sub-section-hr {
-    width: 70%;
-  }
-  #navbar {
-    right: 0.8vw;
-    left: 0.8vw;
-  }
-}
-
-@media (max-width: 960px) {
-  .text {
-    font-size: 0.9em;
-  }
-  .heading h1 {
-    font-size: 45px;
-  }
-  .heading h2 {
-    font-size: 32px;
-  }
-  #navbar {
-    height: 45px;
-  }
-}
-
-@media (max-width: 900px) {
-  .heading #main-hr {
-    width: 90%;
-  }
-  .about-text {
-    width: 90%;
-  }
-  #navbar {
-    right: 0.9vw;
-    left: 0.9vw;
-  }
-}
-
-@media (max-width: 870px) {
-  #navbar {
-    height: auto;
-  }
-}
-
-@media (max-width: 800px) {
-  #navbar {
-    right: 1vw;
-    left: 1vw;
-  }
-  .navlink {
-    padding: 11px 17px;
-  }
-  .text {
-    font-size: 0.8em;
-  }
-  .heading h1 {
-    font-size: 40px;
-  }
-  .heading h2 {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 750px) {
-  #navbar {
-    right: 1.1vw;
-    left: 1.1vw;
-  }
-}
-
-@media (max-width: 730px) {
-  .navlink {
-    font-size: 0.9em;
-  }
-  .heading h1 {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 690px) {
-  #navbar {
-    right: 1.2vw;
-    left: 1.2vw;
-  }
-}
-
-@media (max-width: 680px) {
-  .navlink {
-    font-size: 0.9em;
-    padding: 9px 15px;
-  } 
-}
-
-@media (max-width: 660px) {
-  .navlink {
-    font-size: 0.8em;
-  }
-}
-
-@media (max-width: 630px) {
-  #navbar {
-    right: 1.3vw;
-    left: 1.3vw;
-  }
-}
-
-@media (max-width: 580px) {
-  #navbar {
-    right: 1.4vw;
-    left: 1.4vw;
-  }
-  .navlink {
-    font-size: 0.7em;
-  }
-}
-
-@media (max-width: 520px) {
-  #navbar {
-    right: 1.5vw;
-    left: 1.5vw;
-  }
-  .navlink {
-    padding: 8px 10px;
-  }
-}
-
-@media (max-width: 500px) {
-  .heading .section-hr {
-    width: 90%;
-  }
-  .heading h1 {
-    font-size: 30px;
-  }
-  .heading h2 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 470px) {
-  #navbar {
-    right: 1.7vw;
-    left: 1.7vw;
-  }
-  .navlink {
-    font-size: 0.6em;
+  a.navlink {
+    padding: 3vw;
   }
 }
 
 @media (max-width: 430px) {
-  #navbar {
-    right: 1.9vw;
-    left: 1.9vw;
+  html {
+    font-size: 12px;
   }
-}
-
-@media (max-width: 410px) {
-  .navlink {
-    font-size: 0.5em;
-  }
-  .heading h1 {
-    font-size: 27px;
-  }
-  .link-tile-text {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 380px) {
-  #navbar {
-    right: 2.1vw;
-    left: 2.1vw;
+  div.projects-grid {
+    width: 93%;
+    grid-column-gap: 6%;
   }
 }
 
 @media (max-width: 370px) {
-  .navlink {
-    padding: 6px;
-  }
-  .link-tile-text {
-    font-size: 0.7em;
-  }
-}
-
-@media (max-width: 340px) {
-  #navbar {
-    right: 2.4vw;
-    left: 2.4vw;
+  html {
+    font-size: 10px;
   }
 }
