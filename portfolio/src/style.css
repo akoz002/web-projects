@@ -81,7 +81,7 @@ main {
 /* The page header. */
 header {
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 30vh;
 }
 
@@ -137,7 +137,7 @@ hr.h3-hr {
 
 /* Each main section. */
 section {
-  margin: 15vh 0;
+  padding-top: 8rem;
 }
 
 /* Description at the start of each section. */
@@ -149,13 +149,15 @@ div.section-desc {
 
 /* Grid showing different projects. */
 div.projects-grid {
+  --row-gap: 6rem;
+
   width: 90%;
   max-width: 900px;
-  margin: 10vh auto;
+  margin: var(--row-gap) auto 2rem;
   display: grid;
   grid-template-columns: 64% 28%;
   grid-column-gap: 8%;
-  grid-row-gap: 10vh;
+  grid-row-gap: var(--row-gap);
 }
 
 /* Grid tile containing the project information. */
@@ -200,7 +202,7 @@ p.link-tile-text {
 
 /* The contact section. */
 section#contact {
-  margin-bottom: 20vh;
+  margin-bottom: 14rem;
   text-align: center;
 }
 
