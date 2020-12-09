@@ -18,10 +18,10 @@ export default function Editor(props) {
 
   if (props.isMaximised) {
     sectionStyle = {
-      width: "80vw"
+      width: "96%"
     };
     editorStyle = {
-      height: "75vh"
+      height: "70vh"
     };
   }
 

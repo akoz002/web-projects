@@ -9,55 +9,54 @@
  * couple of stateless functional child components.
  */
 
- import React from 'react';
- import { render } from 'react-dom';
- import App from './components/App';
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/App';
 
- /*
-  * Create some initial markdown and render the App.
-  */
+/*
+ * Create some initial markdown and render the App.
+ */
 
- const initialMarkdown = `
- # Level 1 Heading
- ## Level 2 Heading
- ### Level 3 Heading
+const initialMarkdown = `# Level 1 Heading
+## Level 2 Heading
+### Level 3 Heading
 
- Inline code: \`<section></section>\`
+Inline code: \`<section></section>\`
 
- Multi-line code:
+Multi-line code:
 
- \`\`\`
-  // this is multi-line code:
+\`\`\`
+// this is multi-line code:
 
-  function anotherExample(firstLine, lastLine) {
-    if (firstLine == '...' && lastLine == '...') {
-      return multiLineCode;
-    }
+function anotherExample(a, b) {
+  if (a == '...' && b == '...') {
+    return multiLineCode;
   }
- \`\`\`
+}
+\`\`\`
 
- Text formatting: **bold**, _italic_, **_both_**, ~~crossed out~~
+Text formatting: **bold**, _italic_, **_both_**, ~~crossed out~~
 
- This is a [Link](https://www.freecodecamp.com).
+This is a [Link](https://www.freecodecamp.org).
 
- > This is a Block Quote.
+> This is a Block Quote.
 
- Table Header | Second Header | Third Header
- ------------ | ------------- | -------------
- Data (1,1)   | Data (1,2)    | Data (1,3)
- Data (2,1)   | Data (2,2)    | Data (2,3)
+Table Header | Second Header | Third Header
+------------ | ------------- | -------------
+Data (1,1)   | Data (1,2)    | Data (1,3)
+Data (2,1)   | Data (2,2)    | Data (2,3)
 
- - Bulleted list.
-   - Indent level 1.
-     - Indent level 2.
-       - Indent level 3.
+- Bulleted list.
+  - Indent level 1.
+    - Indent level 2.
+      - Indent level 3.
 
- 1. Numbered list.
- 2. Numbered item 2.
- 3. Numbered item 3.
- `;
+1. Numbered list.
+2. Numbered item 2.
+3. Numbered item 3.
+`;
 
- render(
-   <App initialMarkdown={initialMarkdown} />,
-   document.getElementById('root')
- );
+render(
+  <App initialMarkdown={initialMarkdown} />,
+  document.getElementById('root')
+);

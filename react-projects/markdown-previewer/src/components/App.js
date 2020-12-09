@@ -57,16 +57,23 @@ import Preview from './Preview';
      );
 
      return (
-       <div id="background">
-         <main id="main">
-           <header id="title">
-             <h1>Markdown Previewer</h1>
-             <p>Type markdown text in the editor, and it will appear in the preview panel.</p>
-           </header>
-           {this.state.previewMaximised ? null : editor}
-           {this.state.editorMaximised ? null : preview}
-         </main>
-       </div>
+       <main>
+         <header id="title">
+           <h1>Markdown Previewer</h1>
+           <p>
+             Type markdown text in the editor, and it will appear in the preview
+             panel.
+           </p>
+         </header>
+         {this.state.previewMaximised ? null : editor}
+         {this.state.editorMaximised ? null : preview}
+         <footer>
+           <p>
+             Implemented by Alex Kozlov for <a href="http://www.freecodecamp.org"
+             target="_blank">freeCodeCamp</a>.
+           </p>
+         </footer>
+       </main>
      );
    }
  }

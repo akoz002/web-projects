@@ -17,8 +17,7 @@ export default function Preview(props) {
 
   if (props.isMaximised) {
     sectionStyle = {
-      width: "80vw",
-      marginTop: 0
+      marginTop: '1.5em'
     };
   }
 
