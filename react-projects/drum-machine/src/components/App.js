@@ -10,18 +10,20 @@ import DrumGrid from './DrumGrid';
  */
 
 const App = ({ drumBanks, playedDrumPad, powerOn, bankIndex, volume }) => (
-  <div id="background">
-    <header id="header">
+  <div>
+    <header>
       <h1>Drum Machine App</h1>
-      <p>Press keys or click on the buttons to play drum samples.</p>
-      <p>Try listening to a slow to mid tempo heavy metal or hard rock track, and keeping the beat. It's a lot of fun!</p>
-      <p>All credit goes to the awesome&nbsp;
+      <p>
+        Press keys or click on the buttons to play drum samples.
+      </p>
+      <p>
+        Credit for drum samples goes to the awesome&nbsp;
         <a href="https://www.youtube.com/watch?v=IKIDbeTGkd0" target="_blank">
           metal drum samples pack
         </a>.
       </p>
     </header>
-    <main id="drum-machine">
+    <main>
       <PowerSwitch desc="Power"
         value={powerOn}
         stateDesc={powerOn ? "ON" : "OFF"} />
@@ -34,6 +36,12 @@ const App = ({ drumBanks, playedDrumPad, powerOn, bankIndex, volume }) => (
       <DrumGrid drumBank={drumBanks[bankIndex].bankArray}
         playedDrumPad={playedDrumPad} />
     </main>
+    <footer>
+      <p>
+        Implemented by Alex Kozlov for <a href="http://www.freecodecamp.org"
+        target="_blank">freeCodeCamp</a>.
+      </p>
+    </footer>
   </div>
 );
 
