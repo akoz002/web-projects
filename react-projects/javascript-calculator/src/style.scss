@@ -1,31 +1,40 @@
-#background {
-  $bg-color: hsl(180, 30%, 81%);
-  background-color: $bg-color;
-  border: 1px solid $bg-color;
-  min-height: 97vh;
+
+/* Variables. */
+$button-gap: 0.7em;
+$button-border-width: 0.3em;
+$display-top-offset: 0.45em;
+$display-bot-offset: 0.5em;
+$display-right-offset: 2%;
+
+html {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  color: black;
+  background-color: hsl(180, 30%, 81%);
+  max-width: 500px;
+  min-width: 320px;
+  margin: auto;
+  text-align: center;
 }
 
-/* the main app */
-#main {
-  font-family: 'Orbitron', sans-serif;
+body {
+  margin: 0;
+  padding: 0 2%;
+}
+
+header, footer {
+  margin: 2em 0;
+  line-height: 1.4;
+}
+
+/* The main calculator app. */
+main {
   font-size: 1.4em;
-  max-width: 500px;
-  min-width: 280px;
-  width: 95%;
-  margin: 15vh auto;
   box-shadow: 3px 3px 4px 0px black;
 }
 
-/* generic button class */
-.button {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 6px;
-}
-
-/* the keypad grid */
-#button-grid {
+/* The keypad grid. */
+section#button-grid {
   display: grid;
   grid-template-areas:
     "add subtract multiply divide"
@@ -33,110 +42,101 @@
     "four five six equals"
     "one two three equals"
     "decimal zero clear clear";
-  $button-gap: 13px;
   grid-gap: $button-gap;
   padding: $button-gap;
   background-color: hsl(0, 0%, 20%);
-  border: 5px outset hsl(0, 0%, 50%);
+  border: $button-border-width outset hsl(0, 0%, 50%);
 }
 
-/* create a CSS rule for each number button */
+button {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.4em;
+  border-width: $button-border-width;
+  border-style: outset;
+}
+
+/* Create CSS rules for each number button. */
 $num-buttons: zero, one, two, three, four, five,
   six, seven, eight, nine;
 @each $button in $num-buttons {
   ##{$button} {
     grid-area: $button;
     background-color: hsl(207, 44%, 70%);
-    border: 5px outset hsl(207, 44%, 55%);
+    border-color: hsl(207, 44%, 55%);
   }
-  
+
   ##{$button}:hover {
     background-color: hsl(207, 44%, 83%);
-    border: 5px outset hsl(207, 44%, 68%);
-  }
-  
-  ##{$button}:active {
-    border-style: inset;
+    border-color: hsl(207, 44%, 68%);
   }
 }
 
-/* create a CSS rule for other buttons */
+/* Create CSS rules for the other buttons. */
 $other-buttons: add, subtract, multiply, divide,
   decimal, equals;
 @each $button in $other-buttons {
   ##{$button} {
     grid-area: $button;
     background-color: hsl(177, 70%, 42%);
-    border: 5px outset hsl(177, 70%, 30%);    
+    border-color: hsl(177, 70%, 30%);
   }
-  
+
   ##{$button}:hover {
     background-color: hsl(177, 70%, 55%);
-    border: 5px outset hsl(177, 70%, 43%);
-  }
-
-  ##{$button}:active {
-    border-style: inset;
+    border-color: hsl(177, 70%, 43%);
   }
 }
 
-/* the clear button */
-#clear {
+/* The clear button. */
+button#clear {
   grid-area: clear;
   background-color: hsl(0, 53%, 65%);
-  border: 5px outset hsl(0, 53%, 40%);
+  border-color: hsl(0, 53%, 40%);
 }
 
-#clear:hover {
+button#clear:hover {
   background-color: hsl(0, 53%, 78%);
-  border: 5px outset hsl(0, 53%, 53%);
+  border-color: hsl(0, 53%, 53%);
 }
 
-#clear:active {
-  border-style: inset;
-}
-
-/* the section housing both displays */
-#display-section {
+/* The section housing both displays. */
+section#display-section {
   position: relative;
-  height: 80px;
+  height: 4em;
   background-color: black;
-  border: 7px outset hsl(0, 0%, 30%);
+  border: 0.4em outset hsl(0, 0%, 30%);
+
+  /* The expression and input displays. */
+  div {
+    position: absolute;
+    right: $display-right-offset;
+    width: 100% - (2 * $display-right-offset);
+    height: 1.1em;
+    overflow: hidden;
+    text-align: right;
+  }
 }
 
-$text-margin: 11px;
-
-/* the expression display */
-#expr {
+/* The expression display. */
+div#expr {
   color: cyan;
-  text-align: right;
-  margin-right: $text-margin;
-  margin-top: $text-margin;
+  top: $display-top-offset;
 }
 
-/* the input display */
-#display {
+/* The input display. */
+div#display {
   color: white;
-  position: absolute;
-  bottom: 0px;
-  right: $text-margin;
-  margin-bottom: $text-margin;
+  bottom: $display-bot-offset;
 }
 
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1921px) {
-  #main {
-    font-size: 1.4em;
-    max-width: 500px;
-  }  
-}
-
-@media (max-width: 1920px) {
-  #main {
-    font-size: 1.1em;
-    max-width: 400px;
-  }  
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
 }

@@ -91,10 +91,12 @@ const ButtonGrid = () => (
       char="." />
     <EqualsButton
       id="equals"
-      char="=" />
+      char="="
+      additionalKeys={["Enter"]} />
     <ClearButton
       id="clear"
-      char="AC" />
+      char="AC"
+      additionalKeys={["Backspace", "Delete"]} />
   </section>
 );
 

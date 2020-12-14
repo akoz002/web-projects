@@ -8,15 +8,13 @@ import ButtonGrid from './ButtonGrid';
  */
 
 const App = ({ expr, input }) => (
-  <div id="background">
-    <main id="main">
-      <section id="display-section">
-        <p id="expr">{expr}</p>
-        <p id="display">{input}</p>
-      </section>
-      <ButtonGrid />
-    </main>
-  </div>
+  <main>
+    <section id="display-section">
+      <div id="expr">{expr}</div>
+      <div id="display">{input}</div>
+    </section>
+    <ButtonGrid />
+  </main>
 );
 
 const ConnectedApp = connect(
