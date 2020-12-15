@@ -58,5 +58,5 @@ Data (2,1)   | Data (2,2)    | Data (2,3)
 
 render(
   <App initialMarkdown={initialMarkdown} />,
-  document.getElementById('root')
+  document.getElementById('app')
 );

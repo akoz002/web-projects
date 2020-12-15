@@ -161,5 +161,5 @@ render(
   <Provider store={store}>
     <App drumBanks={drumBanks} />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('app')
 );

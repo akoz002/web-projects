@@ -4,22 +4,6 @@ import { connect } from 'react-redux';
 import { updateDrumPad } from '../redux/actions';
 
 /*
- * A mapping of keyboard keys to key codes.
- */
-
-const KEY_CODES = {
-  Q: 81,
-  W: 87,
-  E: 69,
-  A: 65,
-  S: 83,
-  D: 68,
-  Z: 90,
-  X: 88,
-  C: 67
-};
-
-/*
  * A Drum Pad button that plays a drum sample audio.
  */
 
@@ -64,13 +48,13 @@ class DrumPad extends React.Component {
   }
 
   handleKeyPress(event) {
-    if (event.keyCode === KEY_CODES[this.props.keyboardKey]) {
+    if (event.key.toUpperCase() === this.props.keyboardKey) {
       this.pressButton();
     }
   }
 
   handleKeyRelease(event) {
-    if (event.keyCode === KEY_CODES[this.props.keyboardKey]) {
+    if (event.key.toUpperCase() === this.props.keyboardKey) {
       this.releaseButton();
     }
   }
