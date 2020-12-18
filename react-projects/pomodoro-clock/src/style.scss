@@ -1,158 +1,126 @@
+
 @font-face {
  font-family: 'digital-clock';
- src: url('https://bitbucket.org/alexknz/public_files/raw/269e150cd056efe6104152e7535ad5aa0bb1fa31/fonts/digital-7-mono.ttf');
+ src: url('./fonts/digital-7-mono.ttf');
 }
 
-#background {
-  $color: hsl(0, 0%, 20%);
-  background-color: $color;
-  border: 1px solid $color;
-  min-width: fit-content;
-  min-height: 97vh;
-}
-
-/* colors for the main app area */
+/* Color for the main app area. */
 $main-color: hsl(240, 67%, 85%);
 
-/* colors for buttons in the main area */
+/* Colors for buttons in the main area. */
 $main-button-border-color: hsl(240, 67%, 75%);
-/* hover state */
 $main-button-hover-color: hsl(240, 67%, 93%);
 $main-button-hover-border-color: hsl(240, 67%, 83%);
-  
-/* colors for the timer display area */
+
+/* Color for the timer display area. */
 $timer-color: hsl(300, 24%, 80%);
 
-/* colors for buttons in the timer area */
+/* Colors for buttons in the timer area. */
 $timer-button-border-color: hsl(300, 24%, 65%);
-/* hover state */
 $timer-button-hover-color: hsl(300, 24%, 91%);
 $timer-button-hover-border-color: hsl(300, 24%, 76%);
 
-/* the main area */
-#main {
+html {
+  font-family: 'Passion One', sans-serif;
+  font-size: 16px;
   color: $main-color;
-  background-color: black;
+  background-color: hsl(0, 0%, 20%);
   max-width: 400px;
-  min-width: 280px;
-  margin: 5vh auto auto;
-  font-family: 'Passion One';
+  min-width: 320px;
+  margin: auto;
+  text-align: center;
+}
+
+body {
+  margin: 0 2%;
+}
+
+/* The main app. */
+main {
   font-size: 1.5em;
+  background-color: black;
+  margin: 1.5em 0;
   border: 5px solid $main-color;
-  border-radius: 20px;
+  border-radius: 0.8em;
 }
 
-/* class for all buttons */
-.button {
-  background-color: $main-color;
+a {
+	color: hsl(204deg 64% 65%);
+}
+
+a:visited {
+	color: hsl(270deg 50% 75%);
+}
+
+button {
   font-size: 1em;
-  padding: 8px;
+  background-color: $main-color;
+  padding: 0.4em;
   border: 4px outset $main-button-border-color;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
-.button:hover {
+button:hover {
   background-color: $main-button-hover-color;
   border-color: $main-button-hover-border-color;
 }
 
-.button:active {
+button:active {
   border-style: inset;
 }
 
-/* digital time displays */
-#time-left, #session-length, #break-length {
+/* Panel for updating session duration. */
+div#session-update-container {
+  float: left;
+  width: 50%;
+  margin-bottom: 2.5em;
+}
+
+/* Panel for updating break duration. */
+div#break-update-container {
+  float: right;
+  width: 50%;
+  margin-bottom: 2.5em;
+}
+
+/* Digital time displays. */
+p#session-length, p#break-length, p#time-left {
   font-family: 'digital-clock';
   font-size: 1.5em;
-  text-align: center;
-  margin: 2vh auto;
+  line-height: 1;
+  margin: 1rem 0 1.5rem;
 }
 
-/* class for sesson/break duration update panels */
-.update-container {
-  width: 50%;  
-  text-align: center;
-}
-
-/* panel for updating session duration */
-#session-update-container {
-  float: left;
-}
-
-/* panel for updating break duration */
-#break-update-container {
-  float: right;
-}
-
-/* timer display panel */
-#timer-display {
+/* Timer display panel. */
+div#timer-display {
   clear: both;
   color: $timer-color;
-  width: 55%;
-  min-width: 400px * 0.55;
-  margin: auto auto 11vh;
-  position: relative;
-  top: 7vh;
+  width: 220px;
+  margin: 0 auto 2em;
   border: 3px solid $timer-color;
-  border-radius: 12px;
+  border-radius: 0.5em;
 }
 
-/* session/break label in timer display */
-#timer-label {
-  text-align: center;
-  margin: 2vh auto 0px;
+/* Session/break label in timer display. */
+p#timer-label {
+  margin: 1em 0 0;
 }
 
-/* container for the start/reset buttons */
-#start-reset-button-container {
-  width: fit-content;
-  margin: auto auto 4vh;
+/* Container for the start/reset buttons. */
+div#start-reset-button-container {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em auto;
 }
 
-/* class for the start and reset buttons */
-.start-reset-buttons {
-  @extend .button;
+/* The start and reset buttons. */
+button.start-reset-buttons {
   background-color: $timer-color;
-  border-color: $timer-button-border-color;  
+  border-color: $timer-button-border-color;
 }
 
-.start-reset-buttons:hover {
+button.start-reset-buttons:hover {
   background-color: $timer-button-hover-color;
   border-color: $timer-button-hover-border-color;
-}
-
-/* the start/stop button */
-#start_stop {
-  margin-right: 20px;
-}
-
-/*************************
- ***   Media Queries   ***
- *************************/
-
-@media (min-width: 1921px) {
-  #main {
-    font-size: 1.8em;
-  }
-  #timer-display {
-    min-width: 270px;
-  }
-}
-
-@media (max-width: 1920px) {
-  #main {
-    font-size: 1.5em;
-  }
-  #timer-display {
-    min-width: 220px;
-  }
-}
-
-@media (max-width: 350px) {
-  #main {
-    font-size: 1.3em;
-  }
-  #timer-display {
-    min-width: 203px;
-  }
 }

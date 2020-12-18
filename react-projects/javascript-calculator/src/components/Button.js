@@ -53,7 +53,13 @@ class Button extends React.Component {
   }
 
   handleKeyPress(event) {
-    if (this.isCorrectKey(event.key)) {
+    // multiple presses on hold
+    if (this.props.multiPressOnHold) {
+      if (this.isCorrectKey(event.key)) {
+        this.pressButton();
+      }
+    } // single press on hold
+    else if (!this.state.pressed && this.isCorrectKey(event.key)) {
       this.pressButton();
     }
   }
@@ -91,7 +97,9 @@ class Button extends React.Component {
  */
 
 export const NumberButton = connect(
-  null,
+  () => ({
+    multiPressOnHold: true
+  }),
   dispatch => ({
     onClick: num => dispatch(appendNumber(num))
   })

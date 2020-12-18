@@ -48,7 +48,7 @@ class DrumPad extends React.Component {
   }
 
   handleKeyPress(event) {
-    if (event.key.toUpperCase() === this.props.keyboardKey) {
+    if (!this.state.pressed && event.key.toUpperCase() === this.props.keyboardKey) {
       this.pressButton();
     }
   }

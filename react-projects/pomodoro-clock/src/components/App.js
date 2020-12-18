@@ -13,29 +13,22 @@ import ResetButton from './ResetButton';
  */
 
 const App = () => (
-  <div id="background">
-    <main id="main">
-      <SessionUpdateButtons
-        containerId="session-update-container"
-        labelId="session-label"
-        displayId="session-length"
-        incrId="session-increment"
-        decrId="session-decrement"
-        labelText="Session Length" />
-      <BreakUpdateButtons
-        containerId="break-update-container"
-        labelId="break-label"
-        displayId="break-length"
-        incrId="break-increment"
-        decrId="break-decrement"
-        labelText="Break Length" />
-      <TimerDisplay />
-      <div id="start-reset-button-container">
-        <StartStopButton />
-        <ResetButton />
-      </div>
-    </main>
-  </div>
+  <main>
+    <SessionUpdateButtons
+      containerId="session-update-container"
+      displayId="session-length"
+      labelText="Session Length" />
+    <BreakUpdateButtons
+      containerId="break-update-container"
+      displayId="break-length"
+      labelText="Break Length"
+      altActivated={true} />
+    <TimerDisplay />
+    <div id="start-reset-button-container">
+      <StartStopButton />
+      <ResetButton />
+    </div>
+  </main>
 );
 
 export default App;

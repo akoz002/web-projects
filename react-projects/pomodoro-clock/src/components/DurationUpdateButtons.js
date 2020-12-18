@@ -1,33 +1,32 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import UpdateButton from './UpdateButton';
 import { updateSessionTime, updateBreakTime } from '../redux/actions';
 
 /*
- * Generic buttons to update duration.
+ * A generic container with two buttons to update a duration.
  */
 
 const DurationUpdateButtons = ({
   containerId,
-  labelId,
   displayId,
-  incrId,
-  decrId,
   labelText,
+  altActivated,
   duration,
   updateDuration
 }) => (
-  <div id={containerId} className="update-container">
-    <p id={labelId}>{labelText}</p>
-    <button id={incrId} className="button"
-      onClick={() => updateDuration(1)}>
-      <i className="fas fa-caret-square-up" />
-    </button>
+  <div id={containerId}>
+    <p>{labelText}</p>
+    <UpdateButton onClick={() => updateDuration(1)}
+      faIcon="fas fa-caret-square-up"
+      keyboardKey="ArrowUp"
+      altActivated={altActivated} />
     <p id={displayId}>{duration}</p>
-    <button id={decrId} className="button"
-      onClick={() => updateDuration(-1)}>
-      <i className="fas fa-caret-square-down" />
-    </button>
+    <UpdateButton onClick={() => updateDuration(-1)}
+      faIcon="fas fa-caret-square-down"
+      keyboardKey="ArrowDown"
+      altActivated={altActivated} />
   </div>
 );
 

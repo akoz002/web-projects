@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import bellAudio from '../audio/bell.mp3';
 
 /*
  * Timer Display showing the current time.
@@ -13,7 +14,7 @@ const TimerDisplay = ({
 }) => {
   // play audio if count down is finished
   if (currentTimeMins === 0 && currentTimeSecs === 0) {
-    const audio = document.getElementById('beep');
+    const audio = document.getElementById('bell');
     audio.currentTime = 0;
     audio.play();
   }
@@ -30,7 +31,7 @@ const TimerDisplay = ({
         { String(currentTimeSecs).length < 2 ?
           "0" + currentTimeSecs : currentTimeSecs }
       </p>
-      <audio id="beep" src="https://bitbucket.org/alexknz/public_files/raw/11cde81a03b910654cfe5c502744fa3c0bf36001/front_end_projects/bell.mp3" />
+      <audio id="bell" src={bellAudio} />
     </div>
   );
 };
