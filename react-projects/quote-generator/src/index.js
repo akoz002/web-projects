@@ -37,8 +37,10 @@ const QUOTES = [
    author: AUTHOR + " Quote 13" },
   { quote: "Man who sit on tack, rise above all.",
    author: AUTHOR + " Quote 14" },
+  { quote: "Man who keep feet on solid ground, have trouble putting on pants.",
+   author: AUTHOR + " Quote 15" },
   { quote: "Man who read too many Confucius quotes, become little bit stupid.",
-   author: AUTHOR + " Quote 15" }
+   author: AUTHOR + " Quote 16" }
 ];
 
 ReactDOM.render(

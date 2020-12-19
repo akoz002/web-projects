@@ -15,6 +15,7 @@
  */
 
 import React from 'react';
+import UpdateButton from './UpdateButton';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ export default class App extends React.Component {
     this.state = {
       quoteIndex: this.getNewQuoteIndex()
     };
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -30,37 +32,42 @@ export default class App extends React.Component {
   }
 
   handleClick() {
+    let newIndex;
+    do {
+      newIndex = this.getNewQuoteIndex();
+    } while (newIndex === this.state.quoteIndex);
+
     this.setState({
-      quoteIndex: this.getNewQuoteIndex()
+      quoteIndex: newIndex
     });
   }
 
   render() {
     return (
-      <div id="background">
-        <main id="quote-box">
-          <h1>{this.props.title}</h1>
-          <section>
-            <p id="text">
-              {this.props.quotes[this.state.quoteIndex].quote}
-            </p>
-            <p id="author">
-              - {this.props.quotes[this.state.quoteIndex].author}
-            </p>
-          </section>
-          <footer>
-            <button id="new-quote"
-              onClick={this.handleClick}>
-              {this.props.buttonText}
-            </button>
-            <a id="tweet-quote"
-              href="https://twitter.com/intent/tweet"
-              target="_blank">
-              <i className="fab fa-twitter-square"></i>
-            </a>
-          </footer>
-        </main>
-      </div>
+      <main>
+        <h1>{this.props.title}</h1>
+        <section>
+          <p id="text">
+            {this.props.quotes[this.state.quoteIndex].quote}
+          </p>
+          <p id="author">
+            - {this.props.quotes[this.state.quoteIndex].author}
+          </p>
+        </section>
+        <UpdateButton onClick={this.handleClick}
+          buttonText={this.props.buttonText} />
+        <footer>
+          <a id="tweet-quote"
+            href="https://twitter.com/intent/tweet"
+            target="_blank">
+            <i className="fab fa-twitter-square"></i>
+          </a>
+          <p>
+            Implemented by Alex Kozlov for <a href="http://www.freecodecamp.org"
+            target="_blank">freeCodeCamp</a>.
+          </p>
+        </footer>
+      </main>
     );
   }
 }

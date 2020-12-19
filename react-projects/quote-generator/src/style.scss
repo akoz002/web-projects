@@ -1,74 +1,92 @@
-#background {
-  background: darkslategray;
-  border: 1px darkslategray solid;
-  min-height: 96.5vh;
+
+$button-color: hsl(34, 70%, 89%);
+$button-color-hover: hsl(34, 78%, 94%);
+
+body {
+  font-family: 'Alex Brush', cursive;
+  font-size: 16px;
+  color: $button-color;
+  background-color: darkslategray;
+  min-width: 320px;
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
 }
 
-#quote-box {
-  margin: 10vh auto auto;
-  min-width: 280px;
-  max-width: 800px;
-  width: 50vw;
+main {
+  margin: 0.5em;
 }
 
 h1 {
   font-family: 'Alex Brush', cursive;
   font-size: 2.5em;
-  text-align: center;
   color: snow;
 }
 
+/* The section containing the quote text and author. */
 section {
-  font-family: 'Italianno', cursive; 
+  font-family: 'Italianno', cursive;
   font-size: 2em;
   color: black;
-  background: floralwhite;
+  padding: 0.5em;
+  background-color: floralwhite;
   border: 3px solid white;
-  border-radius: 10px;
-  padding: 15px;
-  
-  #text {
-    margin-top: 0px;
-  }
-  
-  #author {
-    margin-bottom: 0px;
-    text-align: right;
-  }
+  border-radius: 0.3em;
 }
 
-$button-color: hsl(34, 70%, 89%);
-$button-color-hover: hsl(34, 78%, 94%); 
+/* The quote text. */
+p#text {
+  margin-top: 0;
+  text-align: left;
+}
 
-#new-quote {
+/* The quote author. */
+p#author {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+button {
   font-family: 'Great Vibes', cursive;
   font-size: 1.7em;
   display: block;
-  padding: 10px 25px;
-  margin: 8vh auto 10vh;
-  background: $button-color;
+  padding: 0.5em 1em;
+  margin: 3em auto 4em;
+  background-color: $button-color;
   border: 5px white outset;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
-#new-quote:hover {
-  background: $button-color-hover;
+button:hover {
+  background-color: $button-color-hover;
+}
+
+button:active {
+  border-style: inset;
 }
 
 footer {
-  margin-bottom: 5vh;
+  font-size: 1.7em;
 }
 
-#tweet-quote {
-  display: block;
-  margin: 11vh auto auto;
+a {
+	color: hsl(204deg 64% 75%);
+}
+
+a:visited {
+	color: hsl(270deg 50% 85%);
+}
+
+a#tweet-quote {
+  font-size: 2em;
   color: $button-color;
-  font-size: 2.2em;
-  width: 0.9em;
-  line-height: 0.9em;
+  display: block;
+  width: min-content;
+  height: 0.95em;
+  margin: 1em auto;
 }
 
-#tweet-quote:hover {
+a#tweet-quote:hover {
   color: $button-color-hover;
 }
 
@@ -76,26 +94,8 @@ footer {
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1921px) {
-  #quote-box {
-    font-size: 1.2em;
-  }
-}
-
-@media (max-width: 1920px) {
-  #quote-box {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 1440px) {
-  #quote-box {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 1024px) {
-  #quote-box {
-    width: 60vw;
+@media (max-width: 350px) {
+  body {
+    font-size: 14px;
   }
 }
