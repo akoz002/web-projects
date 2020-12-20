@@ -22,7 +22,7 @@ const App = () => (
       containerId="break-update-container"
       displayId="break-length"
       labelText="Break Length"
-      altActivated={true} />
+      shiftActivated={true} />
     <TimerDisplay />
     <div id="start-reset-button-container">
       <StartStopButton />

@@ -17,17 +17,17 @@ export default class UpdateButton extends React.Component {
   }
 
   isCorrectKey(event) {
-    const { keyboardKey, altActivated } = this.props;
+    const { keyboardKey, shiftActivated } = this.props;
 
-    if (altActivated) {
-      if (event.altKey && event.key === keyboardKey) {
+    if (shiftActivated) {
+      if (event.altKey && event.shiftKey && event.key === keyboardKey) {
         return true;
       }
       return false;
     }
 
-    // by default ctrl activated
-    if (event.ctrlKey && event.key === keyboardKey) {
+    // by default alt activated
+    if (event.altKey && !event.shiftKey && event.key === keyboardKey) {
       return true;
     }
 

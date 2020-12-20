@@ -12,7 +12,7 @@ const DurationUpdateButtons = ({
   containerId,
   displayId,
   labelText,
-  altActivated,
+  shiftActivated,
   duration,
   updateDuration
 }) => (
@@ -21,12 +21,12 @@ const DurationUpdateButtons = ({
     <UpdateButton onClick={() => updateDuration(1)}
       faIcon="fas fa-caret-square-up"
       keyboardKey="ArrowUp"
-      altActivated={altActivated} />
+      shiftActivated={shiftActivated} />
     <p id={displayId}>{duration}</p>
     <UpdateButton onClick={() => updateDuration(-1)}
       faIcon="fas fa-caret-square-down"
       keyboardKey="ArrowDown"
-      altActivated={altActivated} />
+      shiftActivated={shiftActivated} />
   </div>
 );
 
