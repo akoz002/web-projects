@@ -16,7 +16,7 @@ import {
 
 const addTooltip = colorScale => {
   // create the tooltip div
-  select('#svg-div')
+  select('main#svg-container')
     .append('div')
       .attr('id', 'tooltip')
       .style('opacity', 0);

@@ -1,7 +1,6 @@
 
 import { select, selectAll } from 'd3-selection';
 import { hierarchy, treemap } from 'd3-hierarchy';
-import addTitle from './addTitle';
 import addTooltip from './addTooltip';
 import plotLegend from './plotLegend';
 import getColorScale from './getColorScale';
@@ -21,9 +20,6 @@ import {
  */
 
 const plotTreemap = dataset => {
-  // add title and description
-  addTitle();
-
   // get a color scale mapping platform names to colors
   const colorScale = getColorScale(dataset);
 
@@ -39,9 +35,7 @@ const plotTreemap = dataset => {
   const nodes = tree(root).leaves();
 
   // create the SVG canvas
-  select('body')
-    .append('div')
-      .attr('id', 'svg-div')
+  select('main#svg-container')
     .append('svg')
       .attr('viewBox', `0 0 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}`);
 
