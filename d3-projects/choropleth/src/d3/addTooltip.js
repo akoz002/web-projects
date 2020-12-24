@@ -9,7 +9,7 @@ import { CANVAS_WIDTH, CANVAS_HEIGHT } from './params';
 
 const addTooltip = eduMap => {
   // the tooltip container
-  select('#svg-div')
+  select('main#svg-container')
     .append('div')
       .attr('id', 'tooltip')
       .style('opacity', 0);
@@ -31,8 +31,9 @@ const addTooltip = eduMap => {
 
         // position the tooltip
         const mousePos = mouse(select('svg').node());
-        const tooltipX = (mousePos[0] / CANVAS_WIDTH * 100) + 3;
-        const tooltipY = (mousePos[1] / CANVAS_HEIGHT * 100) - 13;
+        const tooltipX = Math.max(1,
+          Math.min((mousePos[0] / CANVAS_WIDTH * 100) - 7, 75));
+        const tooltipY = (mousePos[1] / CANVAS_HEIGHT * 100) - 14;
 
         select('#tooltip')
             .attr('data-education', bachelorsOrHigher)

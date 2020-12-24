@@ -3,15 +3,14 @@ import { select } from 'd3-selection';
 import { scalePoint } from 'd3-scale';
 import { range } from 'd3-array';
 import { axisBottom } from 'd3-axis';
-import { CANVAS_WIDTH, CANVAS_HEIGHT } from './params';
 
 /*
  * Adds a legend.
  */
 
 const addLegend = colorScale => {
-  const legendX = CANVAS_WIDTH * 0.35;
-  const legendY = CANVAS_HEIGHT * 0.15;
+  const legendX = 560;
+  const legendY = 135;
   const legendWidth = 500;
   const legendHeight = 50;
 

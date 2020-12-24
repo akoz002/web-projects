@@ -5,7 +5,6 @@ import { scaleQuantize } from 'd3-scale';
 import { schemeOranges } from 'd3-scale-chromatic';
 import { geoPath } from 'd3-geo';
 import { feature } from 'topojson';
-import addTitle from './addTitle';
 import addTooltip from './addTooltip';
 import addLegend from './addLegend';
 import { CANVAS_WIDTH, CANVAS_HEIGHT } from './params';
@@ -15,9 +14,6 @@ import { CANVAS_WIDTH, CANVAS_HEIGHT } from './params';
  */
 
 const plotChoropleth = (eduDataset, countyDataset) => {
-  // add title
-  addTitle();
-
   // create the mapping from county ID to education level
   const eduMap = map();
   eduDataset.forEach(({
@@ -37,22 +33,20 @@ const plotChoropleth = (eduDataset, countyDataset) => {
       .range(schemeOranges[8]);
 
   // create the SVG canvas
-  select('body')
-    .append('div')
-      .attr('id', 'svg-div')
+  select('main#svg-container')
     .append('svg')
       .attr('viewBox', `0 0 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}`);
 
   // plot the choropleth with counties
   const counties = feature(
     countyDataset, countyDataset.objects.counties).features;
-  const choroplethX = CANVAS_WIDTH * 0.23;
-  const choroplethY = CANVAS_HEIGHT * 0.3;
+  const choroplethX = 95;
+  const choroplethY = 250;
 
   select('svg')
     .append('g')
       .attr('id', 'choropleth')
-      .attr('transform', `translate(${choroplethX}, ${choroplethY})`)
+      .attr('transform', `translate(${choroplethX}, ${choroplethY}) scale(1.5)`)
     .selectAll('.county')
     .data(counties)
     .enter()
