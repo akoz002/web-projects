@@ -12,7 +12,7 @@ import { CANVAS_WIDTH, CANVAS_HEIGHT } from './params';
 
 const addTooltip = () => {
   // the tooltip box
-  select('#svg-div')
+  select('main#svg-container')
     .append('div')
       .attr('id', 'tooltip')
       .style('opacity', 0);

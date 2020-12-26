@@ -3,7 +3,6 @@ import { select } from 'd3-selection';
 import { extent, range } from 'd3-array';
 import { scaleBand } from 'd3-scale';
 import { getCellColor } from './getColors';
-import addTitle from './addTitle';
 import addTooltip from './addTooltip';
 import addAxes from './addAxes';
 import addLegend from './addLegend';
@@ -24,9 +23,6 @@ const plotHeatMap = json => {
   const baseTemp = json.baseTemperature;
   const dataset = json.monthlyVariance;
 
-  // add title and description
-  addTitle();
-
   // x scale
   const xExtent = extent(dataset, d => d.year);
   const xScale = scaleBand()
@@ -39,9 +35,7 @@ const plotHeatMap = json => {
       .range([CANVAS_HEIGHT - PADDING_BOT, PADDING_TOP]);
 
   // create the SVG canvas
-  select('body')
-    .append('div')
-      .attr('id', 'svg-div')
+  select('main#svg-container')
     .append('svg')
       .attr('viewBox', `0 0 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}`);
 
