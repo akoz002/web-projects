@@ -13,7 +13,7 @@ import {
 
 const addLegend = () => {
   // the legend box is a 2x2 grid
-  select('#svg-div')
+  select('main#svg-container')
     .append('div')
       .attr('id', 'legend');
 

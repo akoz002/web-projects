@@ -2,7 +2,6 @@
 import { select } from 'd3-selection';
 import { scaleTime } from 'd3-scale';
 import { extent } from 'd3-array';
-import addTitle from './addTitle';
 import addTooltip from './addTooltip';
 import addAxes from './addAxes';
 import addLegend from './addLegend';
@@ -32,8 +31,6 @@ const getDate = str => new Date("1970T00:" + str);
  */
 
 const plotScatterplot = dataset => {
-  addTitle();
-
   // x scale
   const xScale = scaleTime()
       .domain(extent(dataset, d => new Date(String(d["Year"]))))
@@ -45,9 +42,7 @@ const plotScatterplot = dataset => {
       .range([CANVAS_HEIGHT - PADDING_BOT, PADDING_TOP]);
 
   // create the SVG canvas
-  select('body')
-    .append('div')
-      .attr('id', 'svg-div')
+  select('main#svg-container')
     .append('svg')
       .attr('viewBox', `0 0 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}`);
 

@@ -16,7 +16,7 @@ import {
 
 const addTooltip = () => {
   // the tooltip box
-  select('#svg-div')
+  select('main#svg-container')
     .append('div')
       .attr('id', 'tooltip')
       .style('opacity', 0);
