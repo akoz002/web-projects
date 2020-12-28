@@ -26,7 +26,7 @@ const getDateLabel = date => {
 
 const addTooltip = (canvasWidth, canvasHeight) => {
   // the tooltip box
-  select('#svg-div')
+  select('main#svg-container')
     .append('div')
       .attr('id', 'tooltip')
       .style('position', 'absolute')

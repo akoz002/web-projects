@@ -1,97 +1,107 @@
+
 body {
-  font-family: Anton;
+  font-family: Anton, sans-serif;
+  color: black;
   background-color: mistyrose;
-}
-
-/* the chart title */
-#title {
+  box-sizing: border-box;
+  min-width: 320px;
+  padding: 0 1%;
+  margin: 0;
   text-align: center;
 }
 
-/* the main <div> holding the <svg> element */
-#svg-div {
-  background-color: lightpink;
-  margin: auto;
+h1 {
+  font-size: 3em;
+}
+
+/* The main container holding the <svg> element. */
+main#svg-container {
+  position: relative;
   max-width: 1000px;
-  min-width: 300px;
+  margin: auto;
+  background-color: lightpink;
   border: 1px solid darkmagenta;
-  border-radius: 5px;
-  box-shadow: 0px 0px 20px 7px gray;
+  border-radius: 0.4em;
+  box-shadow: 0px 0px 1.25em 0.5em gray;
 }
 
-/* the tooltip box */
+/* The tooltip box. */
 #tooltip {
+  padding: 0.625em;
   background-color: palevioletred;
-  text-align: center;
-  padding: 10px;
   border: 1px solid darkmagenta;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 2px gray;
+  border-radius: 0.3em;
+  box-shadow: 0px 0px 0.3em 0.125em gray;
   pointer-events: none;
 }
 
-/* overlay to highlight selected bar */
+/* Overlay to highlight selected bar. */
 #bar-overlay {
   pointer-events: none;
 }
 
-/* the axes <g> elements */
+/* The axes elements. */
 #x-axis, #y-axis {
-  font-family: Anton;
+  font-family: Anton, sans-serif;
   font-size: 1.6em;
   stroke-width: 3px;
 }
 
-/* the axes labels */
+/* The axes labels. */
 #x-label, #y-label {
   font-size: 2.2em;
 }
 
-/* media queries */
-@media (max-width: 1000px) {
+/*************************/
+/***   Media Queries   ***/
+/*************************/
+
+@media (max-width: 800px) {
   #tooltip {
     font-size: 0.9em;
+    padding: 0.5em;
   }
 }
-@media (max-width: 840px) {
+
+@media (max-width: 740px) {
   #tooltip {
     font-size: 0.8em;
   }
 }
-@media (max-width: 768px) {
-  #tooltip {
-    font-size: 0.7em;
-    padding: 8px;
-  }
-}
+
 @media (max-width: 660px) {
   #tooltip {
-    font-size: 0.6em;
-    padding: 6px;
+    font-size: 0.7em;
+    padding: 0.4em;
   }
 }
+
 @media (max-width: 560px) {
+  #tooltip {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
   #tooltip {
     font-size: 0.5em;
   }
-
-  #title {
-    font-size: 25px;
-  }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2em;
+  }
+
   #tooltip {
     font-size: 0.4em;
-    padding: 4px;
-  }
-}
-@media (max-width: 425px) {
-  #tooltip {
-    font-size: 0.3em;
-    padding: 3px;
   }
 
-  #title {
-    font-size: 20px;
+  footer {
+    font-size: 0.9em;
   }
 }

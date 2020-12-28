@@ -2,7 +2,6 @@
 import { select } from 'd3-selection';
 import { scaleTime, scaleLinear } from 'd3-scale';
 import { extent, max } from 'd3-array';
-import addTitle from './addTitle';
 import addTooltip from './addTooltip';
 import addAxes from './addAxes';
 
@@ -11,8 +10,6 @@ import addAxes from './addAxes';
  */
 
 const plotBarChart = dataset => {
-  addTitle();
-
   // use a 16:9 aspect ratio
   const canvasWidth = 1600;
   const canvasHeight = 900;
@@ -32,10 +29,7 @@ const plotBarChart = dataset => {
       .range([canvasHeight - paddingBot, paddingTop]);
 
   // create the SVG canvas
-  select('body')
-    .append('div')
-      .attr('id', 'svg-div')
-      .style('position', 'relative')
+  select('main#svg-container')
     .append('svg')
       .attr("viewBox", `0 0 ${canvasWidth} ${canvasHeight}`);
 
