@@ -4,20 +4,27 @@ html {
 	font-size: 16px;
 	color: #222;
 	background-color: #FaFaFa;
+	box-sizing: border-box;
+  min-width: 320px;
+  padding: 0 1rem;
 }
 
 body {
-	text-align: justify;
 	max-width: 700px;
 	margin: 1rem auto;
+	text-align: justify;
 }
 
 h1, h2, footer {
 	text-align: center;
 }
 
-h2 {
+h2, footer {
   margin-top: 2rem;
+}
+
+ul {
+	padding-left: 1rem;
 }
 
 p, li {
@@ -28,10 +35,6 @@ li {
   margin-bottom: 1rem;
 }
 
-footer {
-	margin-top: 3rem;
-}
-
 code {
   font-family: monospace;
   padding: 2px;
@@ -40,10 +43,20 @@ code {
 }
 
 a {
-	color: #2574A9;
+	color: hsl(204deg 64% 40%);
+}
+
+a:visited {
+	color: hsl(270deg 64% 30%);
 }
 
 .code-block {
 	background-color: white;
 	padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+}
+
+@media (max-width: 355px) {
+	#ref-link {
+		font-size: 14px;
+	}
 }
