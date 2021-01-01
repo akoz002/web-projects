@@ -1,185 +1,141 @@
-.text {
+
+:root {
+  --nav-color: hsl(25deg 100% 20%);
+  --nav-background: hsl(30deg 70% 66%);
+}
+
+html {
   font-family: Berkshire Swash, serif;
+  color: black;
+  background: linear-gradient(135deg, #ffbd7f, #fff36a);
+  text-align: center;
 }
 
-#background {
-  background: linear-gradient(
-    135deg, #ffbd7f, #fff36a);
-  border: 1px solid #ffbd7f;
+body {
+  min-width: 320px;
+  margin: 0;
 }
 
-#nav-bar {
-  background: hsla(0, 0%, 75%, 25%);
-  border-radius: 5px;
+/* The top nav bar and nav links. */
+nav {
+  font-size: 1.1em;
   position: fixed;
-  right: 1vw;
-  top: 7px;
-  padding: 12px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3em;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: var(--nav-background);
+  border-bottom: var(--nav-color) 1px solid;
 }
 
-#nav-bar a {
-  color: #733000;
-  background: hsla(0, 0%, 65%, 30%);
-  padding: 12px 15px;
-  margin: 0px 1vw;
-  text-align: center;
-  border-radius: 7px;
+nav a {
+  color: var(--nav-color);
+  padding: 1em 2em;
+  border-radius: 0.4em;
 }
 
-#nav-bar a:hover {
-  animation-name: nav-hover;
-  animation-duration: 100ms;
-  animation-fill-mode: forwards;  
+nav a:hover {
+  background-color: hsla(29, 100%, 40%, 0.25);
 }
 
-@keyframes nav-hover {
-  100% {
-    background: hsla(29, 100%, 40%, 0.3);
-  }
-}
-
-#title {
+/* Contains the <h1> title and the logo images. */
+header {
+  font-family: Pacifico, serif;
+  font-size: 1.6em;
+  padding-top: 6em;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 80px auto 2vh;
 }
 
-.logo {
-  max-width: 150px;
+img.logo {
+  max-width: 6em;
 }
 
-#title h1 {
+/* Subtitle and anchor for the "#about" section. */
+#about {
   font-family: Pacifico, serif;
-  text-align: center;
-  font-size: 50px;
-}
-
-#sub-title {
-  font-family: Pacifico, serif;
-  text-align: center;
   font-size: 1.6em;
 }
 
-#main {
-  background: hsla(34, 78%, 91%, 35%);
-  border-radius: 8px;
+main {
+  font-size: 1rem;
   max-width: 680px;
-  margin: 10vh auto;
-  padding: 20px;
-  text-align: justify;
-  line-height: 1.5em;
+  margin: 6em auto;
+  padding: 2em;
+  background-color: hsla(34, 78%, 91%, 35%);
+  border-radius: 0.6em;
+  line-height: 1.5;
 }
 
 ul {
-  padding-right: 20px;
+  padding-left: 1em;
+  margin: 0;
+  text-align: justify;
 }
 
-#main p {
-  text-align: center;
-}
-
-#video {
-  width: 95%;
+iframe#video {
   display: block;
-  margin: 40px auto;
+  width: 100%;
+  margin: 1em auto;
 }
 
+/* Input elements for email sign up. */
 label {
   display: block;
-  text-align: center;
 }
 
 input {
+  font-family: Berkshire Swash, serif;
+  font-size: 1em;
   display: block;
-  margin: 30px auto;
+  margin: 2em auto 0;
 }
 
-#submit {
-  display: block;
-  margin-bottom: 30px;
-  padding: 10px 15px;
-  border: brown 1px solid;
-  border-radius: 5px;
-  background: hsla(0, 0%, 50%, 25%);
+input[type="email"] {
+  padding: 3px;
+  width: 15em;
 }
 
-#submit:hover {
-  animation-name: button-hover;
-  animation-duration: 100ms;
-  animation-fill-mode: forwards;
+input[type="submit"] {
+  padding: 0.5em 1.6em;
+  color: var(--nav-color);
+  background-color: hsl(30deg 70% 72%);
+  border: var(--nav-color) 1px solid;
+  border-radius: 0.4em;
 }
 
-@keyframes button-hover {
-  100% {
-    background: hsla(29, 100%, 50%, 25%);
-  }
+input[type="submit"]:hover {
+  background-color: hsla(29, 100%, 50%, 25%);
 }
 
 footer {
-  text-align: center;
-  position: relative;
-  bottom: 20px;
+  font-size: 1rem;
+  margin: 2em 0;
 }
 
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1921px) {
-  #background {
+@media (min-width: 1920px) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 610px) {
+  header {
     font-size: 1.3em;
-  }
-  #title h1 {
-    font-size: 60px;
-  }
-  #nav-bar a {
-    margin: 0px 1.5vw;
-  }
-}
-
-@media (max-width: 1920px) {
-  #background {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 1440px) {
-  #background {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 1200px) {
-  #nav-bar {
-    right: 0.5vw;
   }
 }
 
 @media (max-width: 500px) {
-  .logo {
-    width: 30%;
-  }
-  #title h1 {
-    font-size: 40px;
-  }
-  #nav-bar {
-    right: 2vw;
-  }
-}
-
-@media (max-width: 400px) {
-  .logo {
-    width: 25%;
-  }
-  #title h1 {
-    font-size: 35px;
-  }
-  #sub-title {
-    font-size: 1.5em;
+  body {
+    font-size: 0.9em;
   }
 }
