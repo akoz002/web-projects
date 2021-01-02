@@ -1,93 +1,86 @@
-.text {
-  color: hsl(7, 100%, 95%);
+
+:root {
+  --box-shadow: 0 0 0.8em 0.2em slateblue;
+}
+
+html {
   font-family: Calistoga, sans-serif;
-  line-height: 1.5em;
+  color: hsl(7, 100%, 95%);
+  background-color: hsl(224, 100%, 21%);
+  line-height: 1.6;
   text-align: center;
 }
 
-.border {
-  border-color: #333;
-  border-width: 4px;
-  border-style: solid;
+body {
+  box-sizing: border-box;
+  min-width: 320px;
+  padding: 0 1%;
+  margin: 0;
 }
 
-#main {
-  background-color: hsl(224, 100%, 21%);
-  padding: 5px;
-}
-
-#title {
+header, footer {
   color: hsl(7, 100%, 90%);
-  font-size: 34px;
 }
 
-#image {
-  max-width: 95%;
+h1 {
+  font-size: 2.8em;
+}
+
+/* The image in the header. */
+img {
   display: block;
-  height: auto;
+  max-width: 100%;
   margin: auto;
-  border-radius: 10px;
-  box-shadow: 7px 7px 10px 0 hsl(7, 10%, 35%);
+  border-radius: 0.7em;
+  box-shadow: var(--box-shadow);
 }
 
-#img-caption {
-  color: hsl(7, 100%, 90%);
-  padding-top: 5px;
+/* The image caption. */
+header p {
+  font-size: 1.2em;
 }
 
-#tribute-info {
-  background-color: hsl(265, 99%, 18%);
-  min-width: 220px;
+/* The main section with text. */
+main {
   max-width: 800px;
-  width: 90%;
-  margin: auto;
-  padding: 20px;
-  border-radius: 13px;
+  margin: 3em auto;
+  padding: 2px 1.5em;
+  background-color: hsl(265, 99%, 18%);
+  border-radius: 0.8em;
+  box-shadow: var(--box-shadow);
   text-align: justify;
-  box-shadow: 8px 8px 10px 0 hsl(7, 10%, 40%); 
 }
 
-#footer {
-  padding: 40px;
+footer {
+  margin: 2em 0;
 }
 
-#footer a {
-  color: hsl(7, 100%, 90%);
+a {
+	color: hsl(204deg 64% 75%);
+}
+
+a:visited {
+	color: hsl(270deg 50% 82%);
 }
 
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1921px) {
-  #main {
-    font-size: 1.2em;
-  }
-  #title {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 1920px) {
-  #main {
+@media (min-width: 1440px) {
+  html {
     font-size: 1.1em;
   }
-  #title {
-    font-size: 34px;
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 1.2em;
   }
 }
 
-@media (max-width: 1440px) {
-  #main {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 500px) {
-  #tribute-info {
-    width: auto;
-  }
-  #title {
-    font-size: 30px;
+@media (max-width: 410px) {
+  header {
+    font-size: 0.8em;
   }
 }
