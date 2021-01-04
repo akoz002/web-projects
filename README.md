@@ -2,6 +2,12 @@
 
 Hi, my name is Alex Kozlov (akoz002) and this repo contains my web development projects. **Frontend** projects are implemented with *HTML, CSS/SASS, JavaScript, React/Redux, D3*, and are built with *Parcel*. **Backend/Fullstack** projects are implemented with *Node.js, Express, Mongoose/MongoDB* and contain *React* components at the frontend.
 
+You can view all of my projects on my portfolio page at the link below (the source can be found at `portfolio/src`):
+
+* https://akoz002.github.io/web-projects/portfolio/dist/
+
+Or you can view the individual projects in the sections below.
+
 ## Backend/Fullstack Projects
 
 At the backend these projects are implemented in *Node.js* and *Express*; the first two also use *Mongoose/MongoDB*. At the frontend these projects contain *React* or *React/Redux* components for posting and getting data from the backend. In each repo below the server source can be found in `server.js` and React source can be found in `views/src/`. The frontend components were built with *Parcel*, and the original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab). For further information and links to demos, please see the individual repos below. Please note that these apps are hosted on Heroku and hibernate while inactive; they may take a few seconds to start up when first opened.
@@ -14,11 +20,7 @@ At the backend these projects are implemented in *Node.js* and *Express*; the fi
 
 ## Frontend Projects
 
-You can view my frontend portfolio page at the link below (the source can be found at `portfolio/src`):
-
-* https://akoz002.github.io/web-projects/portfolio/dist/
-
-Or you can view the individual projects in the sections below. The apps were built with *Parcel* and the original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab).
+The frontend apps were built with *Parcel* and the original source can be viewed in browser developer tools (`Ctrl + Shift + I`, then select the "Source/Debugger" tab).
 
 ### React Apps
 
