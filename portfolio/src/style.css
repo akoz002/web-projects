@@ -60,9 +60,9 @@ a.navlink:focus {
 }
 
 /* Remove mouse focus if :focus-visible is supported. */
-:focus:not(:focus-visible) {
+/* :focus:not(:focus-visible) {
   outline: none;
-}
+} */
 
 /* Polyfill for :focus-visible. */
 .js-focus-visible :focus:not(.focus-visible) {
@@ -209,9 +209,9 @@ div.link-tile a:focus {
 }
 
 /* Remove mouse focus if :focus-visible is supported. */
-div.link-tile a:focus:not(:focus-visible):not(:hover) {
+/* div.link-tile a:focus:not(:focus-visible):not(:hover) {
   background-color: var(--background);
-}
+} */
 
 /* Polyfill for :focus-visible. */
 .js-focus-visible div.link-tile a:focus:not(.focus-visible):not(:hover) {
@@ -267,9 +267,9 @@ a.footer-link:focus {
 }
 
 /* Remove mouse focus if :focus-visible is supported. */
-a.footer-link:focus:not(:focus-visible):not(:hover) {
+/* a.footer-link:focus:not(:focus-visible):not(:hover) {
   color: var(--color);
-}
+} */
 
 /* Polyfill for :focus-visible. */
 .js-focus-visible a.footer-link:focus:not(.focus-visible):not(:hover) {
