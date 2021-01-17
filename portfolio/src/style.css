@@ -3,21 +3,23 @@
 :root {
   --heading-color: darkslategray;
   --nav-background: aliceblue;
-  --background-green: hsl(148, 80%, 88%);
-  --background-blue: hsl(215, 80%, 88%);
-  --background-purple: hsl(286, 80%, 88%);
+  --background-lightblue: hsl(200, 50%, 88%);
+  --background-blue: hsl(215, 60%, 88%);
+  --background-purple: hsl(240, 50%, 88%);
   --border: 1px solid slategray;
+  --section-side-padding: 5%;
+  --section-desc-width: 90%;
 }
 
 html {
   font-family: Russo One, arial;
   color: black;
   background: repeating-linear-gradient(160deg,
-    var(--background-green) 0px,
-    var(--background-blue) 500px,
-    var(--background-purple) 1000px,
-    var(--background-blue) 1500px,
-    var(--background-green) 2000px);
+    var(--background-lightblue) 0vh,
+    var(--background-blue) 100vh,
+    var(--background-purple) 200vh,
+    var(--background-blue) 300vh,
+    var(--background-lightblue) 400vh);
   text-align: justify;
 }
 
@@ -45,7 +47,7 @@ a.navlink {
   text-decoration: none;
   color: var(--heading-color);
   background-color: var(--nav-background);
-  padding: 1.2rem;
+  padding: 1.2em;
 }
 
 a.navlink:hover,
@@ -100,12 +102,12 @@ main {
 header {
   box-sizing: border-box;
   min-height: 100vh;
-  padding-top: 30vh;
+  padding: 30vh var(--section-side-padding) 0;
 }
 
 /* Header subtitle. */
 header p {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -115,15 +117,17 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: 2.1em;
+  width: var(--section-desc-width);
+  margin: 0.83em auto;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 
 hr {
@@ -135,43 +139,42 @@ hr {
 /* <hr> under the <h1> heading. */
 hr.h1-hr {
   width: 90%;
-  max-width: 800px;
-  height: 0.25rem;
+  max-width: 50em;
+  height: 0.25em;
 }
 
 /* <hr> under an <h2> heading. */
 hr.h2-hr {
   width: 80%;
-  max-width: 460px;
-  height: 0.2rem;
+  max-width: 29em;
+  height: 0.2em;
 }
 
 /* <hr> under an <h3> heading. */
 hr.h3-hr {
   width: 80%;
-  max-width: 380px;
-  height: 0.15rem;
+  max-width: 24em;
+  height: 0.15em;
 }
 
 /* Each main section. */
 section {
-  padding-top: 8rem;
+  padding: 8em var(--section-side-padding) 0;
 }
 
 /* Description at the start of each section. */
 div.section-desc {
-  width: 85%;
-  max-width: 800px;
+  width: var(--section-desc-width);
+  max-width: 50em;
   margin: auto;
 }
 
 /* Grid showing different projects. */
 div.projects-grid {
-  --row-gap: 6rem;
+  --row-gap: 6em;
 
-  width: 90%;
-  max-width: 900px;
-  margin: var(--row-gap) auto 2rem;
+  max-width: 57em;
+  margin: var(--row-gap) auto 2em;
   display: grid;
   grid-template-columns: 64% 28%;
   grid-column-gap: 8%;
@@ -180,11 +183,11 @@ div.projects-grid {
 
 /* Grid tile containing the project information. */
 div.info-tile ul {
-  padding-left: 1rem;
+  padding-left: 1em;
 }
 
 div.info-tile ul li {
-  margin: 1rem 0;
+  margin: 1em 0;
 }
 
 /* Grid tile containing the project link. */
@@ -199,7 +202,7 @@ div.link-tile a {
   display: block;
   color: lightblue;
   background-color: var(--background);
-  box-shadow: 0.2rem 0.2rem 0.2rem 0 slategray;
+  box-shadow: 0.2em 0.2em 0.2em 0 slategray;
   border-radius: 3%;
 }
 
@@ -228,13 +231,14 @@ img.link-tile-image {
 /* The <p> element in a link tile. */
 p.link-tile-text {
   text-align: center;
-  margin: 0;
-  padding: 8% 10% 10%;
+  margin: 0 10%;
+  padding: 8% 0 10%;
+  overflow-x: hidden;
 }
 
 /* The contact section. */
 section#contact {
-  margin-bottom: 14rem;
+  margin-bottom: 14em;
   text-align: center;
 }
 
@@ -242,14 +246,14 @@ section#contact {
 footer {
   background-color: var(--nav-background);
   border-top: var(--border);
-  padding-bottom: 1rem;
+  padding: 0 var(--section-side-padding) 1em;
   text-align: center;
 }
 
 /* Flex container for the footer links. */
 div#footer-links {
-  max-width: 400px;
-  font-size: 2rem;
+  font-size: 2em;
+  max-width: 12.5em;
   padding: 1em 0;
   margin: auto;
   display: flex;
@@ -280,27 +284,51 @@ a.footer-link:focus {
  ***   Media Queries   ***
  *************************/
 
-@media (max-width: 540px) {
+@media (min-width: 80em) {
   html {
-    font-size: 14px;
-  }
-  a.navlink {
-    padding: 3vw;
+    font-size: 1.2em;
   }
 }
 
-@media (max-width: 430px) {
+@media (min-width: 100em) {
   html {
-    font-size: 12px;
+    font-size: 1.4em;
   }
+}
+
+@media (min-width: 120em) {
+  html {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 140em) {
+  html {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 160em) {
+  html {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 33em) {
+  /* Single column layout. */
   div.projects-grid {
-    width: 93%;
-    grid-column-gap: 6%;
+    grid-template-columns: 100%;
+    grid-row-gap: 3em;
+  }
+
+  div.link-tile a {
+    width: 50%;
+    margin: 0 auto 3em;
   }
 }
 
-@media (max-width: 370px) {
-  html {
-    font-size: 10px;
+@media (max-width: 21em) {
+  a.navlink {
+    padding: 1em;
   }
 }
