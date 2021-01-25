@@ -12,8 +12,11 @@ import React from 'react';
 
 export default function PanelHeader(props) {
   let buttonIcon = <i className="fas fa-window-maximize"></i>;
+  let screenReaderText = <div className="screen-reader-only">maximize</div>;
+
   if (props.isMaximised) {
     buttonIcon = <i className="fas fa-window-minimize"></i>;
+    screenReaderText = <div className="screen-reader-only">minimize</div>;
   }
 
   return (
@@ -22,6 +25,7 @@ export default function PanelHeader(props) {
       <button className="max-button"
         onClick={props.onMaximise}>
         {buttonIcon}
+        {screenReaderText}
       </button>
     </header>
   );

@@ -10,17 +10,16 @@ $section-box-shadow: 0.25em 0.25em 0.25em 0px darkgray;
 
 body {
   font-family: Aldrich, monospace;
-  font-size: 16px;
   color: black;
   background-color: AliceBlue;
+  min-width: 320px;
   margin: 0;
   text-align: left;
   line-height: 1.2;
 }
 
 main {
-  min-width: 321px;
-  max-width: 1200px;
+  max-width: 75em;
   margin: auto;
 }
 
@@ -32,6 +31,12 @@ header#title, footer {
   width: $preview-section-width;
   margin: 1.5em auto;
   line-height: 1.3;
+}
+
+/* Keyboard and mouse focus for all elements. */
+:focus {
+  outline: thick dashed black;
+  outline-offset: 3px;
 }
 
 /* The header at the top of both panels. */
@@ -88,7 +93,7 @@ textarea#editor {
   color: azure;
   background-color: darkslategray;
   box-sizing: border-box;
-  min-height: 100px;
+  min-height: 10em;
   height: 35vh;
   width: 100%;
   margin: 0;
@@ -111,6 +116,7 @@ div#preview {
   color: $preview-color;
   background-color: lavender;
   padding: 1em;
+  overflow-wrap: break-word;
 
   /* Styles for the parsed markdown elements. */
   table {
@@ -136,12 +142,46 @@ div#preview {
   }
 }
 
+/* Screen-reader only, visually hidden. */
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (max-width: 370px) {
-  body {
-    font-size: 14px;
-  }
-}
+ @media (min-width: 80em) {
+   html {
+     font-size: 1.2em;
+   }
+ }
+
+ @media (min-width: 100em) {
+   html {
+     font-size: 1.4em;
+   }
+ }
+
+ @media (min-width: 120em) {
+   html {
+     font-size: 1.6em;
+   }
+ }
+
+ @media (min-width: 140em) {
+   html {
+     font-size: 1.8em;
+   }
+ }
+
+ @media (min-width: 160em) {
+   html {
+     font-size: 2em;
+   }
+ }

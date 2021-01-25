@@ -39,6 +39,8 @@ Text formatting: **bold**, _italic_, **_both_**, ~~crossed out~~
 
 This is a [Link](https://www.freecodecamp.org).
 
+This is a long URL: \`https://codepen.io/userName/pen/penIdSlug/image/small.png\`.
+
 > This is a Block Quote.
 
 Table Header | Second Header | Third Header
