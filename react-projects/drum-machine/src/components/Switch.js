@@ -8,14 +8,14 @@ import { togglePower, toggleBank } from '../redux/actions';
  * Toggled with a mouse down press.
  */
 
-const Switch = ({ desc, stateDesc, value, onMouseDown }) => (
+const Switch = ({ desc, stateDesc, value, handleChange }) => (
   <div className="switch">
     <p>{desc}:
       <span className="state-desc">{' ' + stateDesc}</span>
     </p>
     <input type="range" min="0" max="1" className="range-input"
       value={value}
-      onMouseDown={onMouseDown} />
+      onChange={handleChange} />
   </div>
 );
 
@@ -29,7 +29,7 @@ const Switch = ({ desc, stateDesc, value, onMouseDown }) => (
 export const PowerSwitch = connect(
   null,
   dispatch => ({
-    onMouseDown: () => dispatch(togglePower())
+    handleChange: () => dispatch(togglePower())
   })
 )(Switch);
 
@@ -40,6 +40,6 @@ export const PowerSwitch = connect(
 export const BankSwitch = connect(
   null,
   dispatch => ({
-    onMouseDown: () => dispatch(toggleBank())
+    handleChange: () => dispatch(toggleBank())
   })
 )(Switch);
