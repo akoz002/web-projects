@@ -10,24 +10,21 @@ import {
 
 /*
  * Button grid (keypad).
+ * Ordered for keyboard navigation.
  */
 
 const numbers = [
   {
-    id: 'zero',
-    char: '0'
+    id: 'seven',
+    char: '7'
   },
   {
-    id: 'one',
-    char: '1'
+    id: 'eight',
+    char: '8'
   },
   {
-    id: 'two',
-    char: '2'
-  },
-  {
-    id: 'three',
-    char: '3'
+    id: 'nine',
+    char: '9'
   },
   {
     id: 'four',
@@ -42,16 +39,20 @@ const numbers = [
     char: '6'
   },
   {
-    id: 'seven',
-    char: '7'
+    id: 'one',
+    char: '1'
   },
   {
-    id: 'eight',
-    char: '8'
+    id: 'two',
+    char: '2'
   },
   {
-    id: 'nine',
-    char: '9'
+    id: 'three',
+    char: '3'
+  },
+  {
+    id: 'zero',
+    char: '0'
   }
 ];
 
@@ -74,15 +75,16 @@ const operators = [
   }
 ];
 
+/* Add buttons in correct keyboard navigation order. */
 const ButtonGrid = () => (
   <section id="button-grid">
-    {numbers.map(button => (
-      <NumberButton key={button.id}
+    {operators.map(button => (
+      <OperatorButton key={button.id}
         id={button.id}
         char={button.char} />
     ))}
-    {operators.map(button => (
-      <OperatorButton key={button.id}
+    {numbers.map(button => (
+      <NumberButton key={button.id}
         id={button.id}
         char={button.char} />
     ))}

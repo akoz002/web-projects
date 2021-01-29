@@ -8,10 +8,9 @@ $display-right-offset: 2%;
 
 html {
   font-family: 'Orbitron', sans-serif;
-  font-size: 16px;
   color: black;
   background-color: hsl(180, 30%, 81%);
-  max-width: 500px;
+  max-width: 32em;
   min-width: 320px;
   margin: auto;
   text-align: center;
@@ -131,12 +130,45 @@ div#display {
   bottom: $display-bot-offset;
 }
 
+/* Keyboard and mouse focus. */
+:focus {
+  outline: thick dashed white;
+}
+
+a:focus {
+  outline-color: black;
+}
+
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (max-width: 400px) {
-  html {
-    font-size: 14px;
-  }
-}
+ @media (min-width: 80em) {
+   html {
+     font-size: 1.2em;
+   }
+ }
+
+ @media (min-width: 100em) {
+   html {
+     font-size: 1.4em;
+   }
+ }
+
+ @media (min-width: 120em) {
+   html {
+     font-size: 1.6em;
+   }
+ }
+
+ @media (min-width: 140em) {
+   html {
+     font-size: 1.8em;
+   }
+ }
+
+ @media (min-width: 160em) {
+   html {
+     font-size: 2em;
+   }
+ }

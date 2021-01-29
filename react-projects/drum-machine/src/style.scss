@@ -66,8 +66,7 @@ button.drum-pad {
   border-radius: 0.3em;
 }
 
-button.drum-pad:hover,
-button.drum-pad:focus {
+button.drum-pad:hover {
   background-color: hsl(0, 0%, 27%);
   border-color: hsl(0, 0%, 72%);
 }
@@ -137,9 +136,10 @@ div.slider {
   }
 }
 
-/* Keyboard and mouse focus for all elements. */
+/* Keyboard and mouse focus. */
 :focus {
-  outline: 4px dashed black;
+  outline: thick dashed black;
+  outline-offset: 4px;
 }
 
 /*************************

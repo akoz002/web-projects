@@ -40,32 +40,47 @@ class Button extends React.Component {
     });
   }
 
-  isCorrectKey(pressedKey) {
+  isCorrectKey(pressedKey, hasFocus) {
+    if (hasFocus && 'Enter' === pressedKey) {
+      return true;
+    }
+
     const { char, additionalKeys } = this.props;
 
     if (char === pressedKey) {
       return true;
     }
     if (additionalKeys && additionalKeys.includes(pressedKey)) {
+      if (pressedKey === "Enter") {
+        /* If the active element is either <body>, <html> or null, it means that
+        no interactable element on the page has focus. In this case, the "Enter"
+        key press activates this button. */
+        if (document.activeElement === document.body ||
+            document.activeElement === document.documentElement ||
+            document.activeElement === null) {
+              return true;
+        }
+        return false;
+      }
       return true;
     }
     return false;
   }
 
-  handleKeyPress(event) {
+  handleKeyPress(event, hasFocus = false) {
     // multiple presses on hold
     if (this.props.multiPressOnHold) {
-      if (this.isCorrectKey(event.key)) {
+      if (this.isCorrectKey(event.key, hasFocus)) {
         this.pressButton();
       }
     } // single press on hold
-    else if (!this.state.pressed && this.isCorrectKey(event.key)) {
+    else if (!this.state.pressed && this.isCorrectKey(event.key, hasFocus)) {
       this.pressButton();
     }
   }
 
-  handleKeyRelease(event) {
-    if (this.isCorrectKey(event.key)) {
+  handleKeyRelease(event, hasFocus = false) {
+    if (this.isCorrectKey(event.key, hasFocus)) {
       this.releaseButton();
     }
   }
@@ -85,7 +100,9 @@ class Button extends React.Component {
       <button id={this.props.id}
         style={this.state.pressed ? { borderStyle: "inset" } : {}}
         onMouseDown={this.pressButton}
-        onMouseUp={this.releaseButton}>
+        onMouseUp={this.releaseButton}
+        onKeyDown={e => this.handleKeyPress(e, true)}
+        onKeyUp={e => this.handleKeyRelease(e, true)}>
         {this.props.char}
       </button>
     );
