@@ -21,12 +21,14 @@ const DurationUpdateButtons = ({
     <UpdateButton onClick={() => updateDuration(1)}
       faIcon="fas fa-caret-square-up"
       keyboardKey="ArrowUp"
-      shiftActivated={shiftActivated} />
+      shiftActivated={shiftActivated}
+      screenReaderText={"Increase " + labelText} />
     <p id={displayId}>{duration}</p>
     <UpdateButton onClick={() => updateDuration(-1)}
       faIcon="fas fa-caret-square-down"
       keyboardKey="ArrowDown"
-      shiftActivated={shiftActivated} />
+      shiftActivated={shiftActivated}
+      screenReaderText={"Decrease " + labelText} />
   </div>
 );
 

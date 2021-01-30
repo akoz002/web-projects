@@ -70,6 +70,7 @@ class ResetButton extends React.Component {
         style={this.state.pressed ? { borderStyle: "inset" } : {}}
         onClick={this.handleClick}>
         <i className="fas fa-sync-alt" />
+        <div className="screen-reader-only">Reset</div>
       </button>
     );
   }

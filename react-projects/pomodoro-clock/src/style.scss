@@ -22,10 +22,9 @@ $timer-button-hover-border-color: hsl(300, 24%, 76%);
 
 html {
   font-family: 'Passion One', sans-serif;
-  font-size: 16px;
   color: $main-color;
   background-color: hsl(0, 0%, 20%);
-  max-width: 400px;
+  max-width: 25em;
   min-width: 320px;
   margin: auto;
   text-align: center;
@@ -33,6 +32,14 @@ html {
 
 body {
   margin: 0 2%;
+}
+
+header, footer {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 2.2em;
 }
 
 /* The main app. */
@@ -95,7 +102,7 @@ p#session-length, p#break-length, p#time-left {
 div#timer-display {
   clear: both;
   color: $timer-color;
-  width: 220px;
+  width: 9em;
   margin: 0 auto 2em;
   border: 3px solid $timer-color;
   border-radius: 0.5em;
@@ -108,7 +115,7 @@ p#timer-label {
 
 /* Container for the start/reset buttons. */
 div#start-reset-button-container {
-  width: 130px;
+  width: 5.5em;
   display: flex;
   justify-content: space-between;
   margin: 2em auto;
@@ -124,3 +131,53 @@ button.start-reset-buttons:hover {
   background-color: $timer-button-hover-color;
   border-color: $timer-button-hover-border-color;
 }
+
+/* Keyboard and mouse focus. */
+:focus {
+  outline: thick dashed white;
+  outline-offset: 4px;
+}
+
+/* Screen-reader only, visually hidden. */
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+
+ @media (min-width: 80em) {
+   html {
+     font-size: 1.2em;
+   }
+ }
+
+ @media (min-width: 100em) {
+   html {
+     font-size: 1.4em;
+   }
+ }
+
+ @media (min-width: 120em) {
+   html {
+     font-size: 1.6em;
+   }
+ }
+
+ @media (min-width: 140em) {
+   html {
+     font-size: 1.8em;
+   }
+ }
+
+ @media (min-width: 160em) {
+   html {
+     font-size: 2em;
+   }
+ }

@@ -40,8 +40,20 @@ class StartStopButton extends React.Component {
     }
   }
 
+  activateButton() {
+    /* If the active element is either <body>, <html> or null, it means that
+    no interactable element on the page has focus. In this case, the "Enter"
+    key press activates this button. */
+    if (document.activeElement === document.body ||
+        document.activeElement === document.documentElement ||
+        document.activeElement === null) {
+          return true;
+    }
+    return false;
+  }
+
   handleKeyPress(event) {
-    if (!this.state.pressed && event.key === 'Enter') {
+    if (!this.state.pressed && event.key === 'Enter' && this.activateButton()) {
       this.setState({
         pressed: true
       });
@@ -51,7 +63,7 @@ class StartStopButton extends React.Component {
   }
 
   handleKeyRelease(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && this.activateButton()) {
       this.setState({
         pressed: false
       });
@@ -75,6 +87,8 @@ class StartStopButton extends React.Component {
         onClick={this.handleClick}>
         { this.props.timerID ? <i className="fas fa-pause-circle" />
                              : <i className="fas fa-play-circle" /> }
+        { this.props.timerID ? <div className="screen-reader-only">Stop</div>
+                             : <div className="screen-reader-only">Start</div> }
       </button>
     );
   }

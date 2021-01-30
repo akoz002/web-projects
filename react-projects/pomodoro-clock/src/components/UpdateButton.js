@@ -67,6 +67,7 @@ export default class UpdateButton extends React.Component {
       <button onClick={this.props.onClick}
         style={this.state.pressed ? { borderStyle: "inset" } : {}}>
         <i className={this.props.faIcon} />
+        <div className="screen-reader-only">{this.props.screenReaderText}</div>
       </button>
     );
   }
