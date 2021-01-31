@@ -61,6 +61,7 @@ export default class App extends React.Component {
             href="https://twitter.com/intent/tweet"
             target="_blank">
             <i className="fab fa-twitter-square"></i>
+            <div className="screen-reader-only">Tweet Quote</div>
           </a>
           <p>
             Implemented by Alex Kozlov for <a href="http://www.freecodecamp.org"

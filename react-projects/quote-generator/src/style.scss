@@ -4,11 +4,10 @@ $button-color-hover: hsl(34, 78%, 94%);
 
 body {
   font-family: 'Alex Brush', cursive;
-  font-size: 16px;
   color: $button-color;
   background-color: darkslategray;
   min-width: 320px;
-  max-width: 800px;
+  max-width: 50em;
   margin: 2em auto;
   text-align: center;
 }
@@ -90,12 +89,52 @@ a#tweet-quote:hover {
   color: $button-color-hover;
 }
 
+/* Keyboard and mouse focus. */
+:focus {
+  outline: thick dashed white;
+  outline-offset: 4px;
+}
+
+/* Screen-reader only, visually hidden. */
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (max-width: 350px) {
-  body {
-    font-size: 14px;
-  }
-}
+ @media (min-width: 80em) {
+   html {
+     font-size: 1.2em;
+   }
+ }
+
+ @media (min-width: 100em) {
+   html {
+     font-size: 1.4em;
+   }
+ }
+
+ @media (min-width: 120em) {
+   html {
+     font-size: 1.6em;
+   }
+ }
+
+ @media (min-width: 140em) {
+   html {
+     font-size: 1.8em;
+   }
+ }
+
+ @media (min-width: 160em) {
+   html {
+     font-size: 2em;
+   }
+ }

@@ -47,14 +47,18 @@ class DrumPad extends React.Component {
     });
   }
 
-  handleKeyPress(event, keyboardKey = this.props.keyboardKey) {
-    if (!this.state.pressed && event.key.toUpperCase() === keyboardKey) {
-      this.pressButton();
+  handleKeyPress(event, keyboardKey = this.props.keyboardKey, additionalKeys = null) {
+    if (!this.state.pressed) {
+      if (event.key.toUpperCase() === keyboardKey ||
+         (additionalKeys && additionalKeys.includes(event.key))) {
+        this.pressButton();
+      }
     }
   }
 
-  handleKeyRelease(event, keyboardKey = this.props.keyboardKey) {
-    if (event.key.toUpperCase() === keyboardKey) {
+  handleKeyRelease(event, keyboardKey = this.props.keyboardKey, additionalKeys = null) {
+    if (event.key.toUpperCase() === keyboardKey ||
+       (additionalKeys && additionalKeys.includes(event.key))) {
       this.releaseButton();
     }
   }
@@ -86,8 +90,8 @@ class DrumPad extends React.Component {
         className="drum-pad"
         onMouseDown={this.pressButton}
         onMouseUp={this.releaseButton}
-        onKeyDown={e => this.handleKeyPress(e, 'ENTER')}
-        onKeyUp={e => this.handleKeyRelease(e, 'ENTER')}>
+        onKeyDown={e => this.handleKeyPress(e, 'ENTER', [' '])}
+        onKeyUp={e => this.handleKeyRelease(e, 'ENTER', [' '])}>
         <audio id={this.props.keyboardKey} className="clip"
           src={this.props.audioFile} />
         {this.props.keyboardKey}

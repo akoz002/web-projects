@@ -41,7 +41,7 @@ class Button extends React.Component {
   }
 
   isCorrectKey(pressedKey, hasFocus) {
-    if (hasFocus && 'Enter' === pressedKey) {
+    if (hasFocus && ('Enter' === pressedKey || ' ' === pressedKey)) {
       return true;
     }
 
