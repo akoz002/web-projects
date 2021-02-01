@@ -197,28 +197,20 @@ div.link-tile {
 
 /* The <a> element in a link tile. */
 div.link-tile a {
-  --background: black;
-
   display: block;
   color: lightblue;
-  background-color: var(--background);
+  background-color: black;
   box-shadow: 0.2em 0.2em 0.2em 0 slategray;
   border-radius: 3%;
 }
 
-div.link-tile a:hover,
-div.link-tile a:focus {
+div.link-tile a:hover {
   background-color: hsl(0, 0%, 25%);
 }
 
-/* Remove mouse focus if :focus-visible is supported. */
-/* div.link-tile a:focus:not(:focus-visible):not(:hover) {
-  background-color: var(--background);
-} */
-
-/* Polyfill for :focus-visible. */
-.js-focus-visible div.link-tile a:focus:not(.focus-visible):not(:hover) {
-  background-color: var(--background);
+div.link-tile a:focus {
+  outline-width: thick;
+  outline-offset: 3px;
 }
 
 /* The <img> element in a link tile. */
@@ -261,23 +253,16 @@ div#footer-links {
 }
 
 a.footer-link {
-  --color: black;
-  color: var(--color);
+  color: black;
 }
 
-a.footer-link:hover,
-a.footer-link:focus {
+a.footer-link:hover {
   color: gray;
 }
 
-/* Remove mouse focus if :focus-visible is supported. */
-/* a.footer-link:focus:not(:focus-visible):not(:hover) {
-  color: var(--color);
-} */
-
-/* Polyfill for :focus-visible. */
-.js-focus-visible a.footer-link:focus:not(.focus-visible):not(:hover) {
-  color: var(--color);
+a.footer-link:focus {
+  outline-width: thick;
+  outline-offset: 3px;
 }
 
 /* Screen-reader only, visually hidden. */
