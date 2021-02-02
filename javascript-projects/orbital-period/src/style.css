@@ -1,17 +1,16 @@
 
 html {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
 	color: #222;
 	background-color: #FaFaFa;
 	box-sizing: border-box;
   min-width: 320px;
-  padding: 0 1rem;
+  padding: 0 1em;
 }
 
 body {
-	max-width: 700px;
-	margin: 1rem auto;
+	max-width: 44em;
+	margin: 1em auto;
 	text-align: justify;
 }
 
@@ -24,15 +23,15 @@ h2, footer {
 }
 
 ul {
-	padding-left: 1rem;
+	padding-left: 1em;
 }
 
 p, li {
-	line-height: 1.4rem;
+	line-height: 1.4;
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 
 code {
@@ -50,13 +49,50 @@ a:visited {
 	color: hsl(270deg 64% 30%);
 }
 
-.code-block {
-	background-color: white;
-	padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+a#ref-link {
+	overflow-wrap: break-word;
 }
 
-@media (max-width: 355px) {
-	#ref-link {
-		font-size: 14px;
-	}
+.code-block {
+	background-color: white;
+	padding: 0.8em 0.8em 0.8em 1.2em;
+}
+
+/* Keyboard and mouse focus. */
+:focus {
+  outline: medium dotted black;
+}
+
+/*************************
+ ***   Media Queries   ***
+ *************************/
+
+@media (min-width: 80em) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 100em) {
+  html {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 120em) {
+  html {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 140em) {
+  html {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 160em) {
+  html {
+    font-size: 2em;
+  }
 }
