@@ -27,6 +27,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: var(--nav-background);
   border-bottom: var(--nav-color) 1px solid;
 }
@@ -37,8 +38,19 @@ nav a {
   border-radius: 0.4em;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background-color: hsla(29, 100%, 40%, 0.25);
+}
+
+/* Keyboard and mouse focus. */
+:focus {
+  outline: medium dotted black;
+}
+
+/* Remove mouse focus if :focus-visible is supported. */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Contains the <h1> title and the logo images. */
@@ -53,18 +65,19 @@ header {
 }
 
 img.logo {
-  max-width: 6em;
+  width: 6em;
+  max-width: 30%;
 }
 
 /* Subtitle and anchor for the "#about" section. */
 #about {
   font-family: Pacifico, serif;
   font-size: 1.6em;
+  padding: 0 1em;
 }
 
 main {
-  font-size: 1rem;
-  max-width: 680px;
+  max-width: 43em;
   margin: 6em auto;
   padding: 2em;
   background-color: hsla(34, 78%, 91%, 35%);
@@ -114,28 +127,56 @@ input[type="submit"]:hover {
 }
 
 footer {
-  font-size: 1rem;
   margin: 2em 0;
+  padding: 0 1em;
 }
 
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1920px) {
-  html {
-    font-size: 1.2em;
-  }
-}
+ @media (min-width: 80em) {
+   html {
+     font-size: 1.2em;
+   }
+ }
 
-@media (max-width: 610px) {
+ @media (min-width: 100em) {
+   html {
+     font-size: 1.4em;
+   }
+ }
+
+ @media (min-width: 120em) {
+   html {
+     font-size: 1.6em;
+   }
+ }
+
+ @media (min-width: 140em) {
+   html {
+     font-size: 1.8em;
+   }
+ }
+
+ @media (min-width: 160em) {
+   html {
+     font-size: 2em;
+   }
+ }
+
+/* Single column layout for the header. */
+@media (max-width: 32em) {
   header {
-    font-size: 1.3em;
+    padding: 6em 1em 0;
+    flex-direction: column;
   }
-}
 
-@media (max-width: 500px) {
-  body {
-    font-size: 0.9em;
+  h1 {
+    margin: 0;
+  }
+
+  img.logo {
+    max-width: 60%;
   }
 }
