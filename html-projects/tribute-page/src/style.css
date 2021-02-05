@@ -23,12 +23,13 @@ header, footer {
 }
 
 h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
 }
 
 /* The image in the header. */
 img {
   display: block;
+  width: 25em;
   max-width: 100%;
   margin: auto;
   border-radius: 0.7em;
@@ -42,7 +43,7 @@ header p {
 
 /* The main section with text. */
 main {
-  max-width: 800px;
+  max-width: 50em;
   margin: 3em auto;
   padding: 2px 1.5em;
   background-color: hsl(265, 99%, 18%);
@@ -63,24 +64,46 @@ a:visited {
 	color: hsl(270deg 50% 82%);
 }
 
+/* Keyboard and mouse focus. */
+:focus {
+  outline: medium dotted white;
+}
+
+/* Remove mouse focus if :focus-visible is supported. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /*************************
  ***   Media Queries   ***
  *************************/
 
-@media (min-width: 1440px) {
-  html {
-    font-size: 1.1em;
-  }
-}
+ @media (min-width: 80em) {
+   html {
+     font-size: 1.2em;
+   }
+ }
 
-@media (min-width: 1920px) {
-  html {
-    font-size: 1.2em;
-  }
-}
+ @media (min-width: 100em) {
+   html {
+     font-size: 1.4em;
+   }
+ }
 
-@media (max-width: 410px) {
-  header {
-    font-size: 0.8em;
-  }
-}
+ @media (min-width: 120em) {
+   html {
+     font-size: 1.6em;
+   }
+ }
+
+ @media (min-width: 140em) {
+   html {
+     font-size: 1.8em;
+   }
+ }
+
+ @media (min-width: 160em) {
+   html {
+     font-size: 2em;
+   }
+ }
