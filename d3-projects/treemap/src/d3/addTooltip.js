@@ -38,12 +38,14 @@ const addTooltip = colorScale => {
         const height = d.y1 - d.y0;
 
         // position the tooltip
-        // create a 15% right margin
+        // tooltipX and tooltipY units are % of parent container dimensions
+        // offset x by 25% of the width of the cell
         const tooltipX = Math.min(
           (x + width * 0.25) / CANVAS_WIDTH * 100,
-          85
+          85 // no more than 85% across
         );
-        const tooltipY = (y / CANVAS_HEIGHT * 100) - 17;
+        // offset y by 3% of the height of the parent container
+        const tooltipY = (y / CANVAS_HEIGHT * 100) - 3;
 
         select('#tooltip')
             .attr('data-value', value)

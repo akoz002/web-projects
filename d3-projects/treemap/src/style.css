@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   min-width: 320px;
   margin: 0;
-  padding: 0 1%;
+  padding: 0 2%;
   text-align: center;
 }
 
@@ -21,13 +21,23 @@ header p {
 /* The container of the <svg> element. */
 main#svg-container {
   position: relative;
-  max-width: 1400px;
   margin: auto;
+}
+
+/* Fix the <svg> font-size to 16px (i.e. 16 user units) for correct
+   user unit sizes inside the <svg> viewBox. The viewBox will scale
+   correctly when resizing. */
+svg {
+  font-size: 16px;
 }
 
 /* Treemap tiles. */
 rect.tile {
   stroke: black;
+}
+
+rect.tile + text {
+  font-size: 1.2em;
 }
 
 /* Treemap tile labels. */
@@ -48,12 +58,15 @@ text.legend-label {
 /* The tooltip container. */
 div#tooltip {
   position: absolute;
-  max-width: 25%;
+  right: -1%;
+  transform: translate(0%, -100%);
+  max-width: max-content;
   padding: 0.8em;
   background-color: aliceblue;
   border: 0.1em solid darkslategray;
   box-shadow: 0px 0px 0.3em 0.1em darkslategray;
   pointer-events: none;
+  overflow-wrap: break-word;
 }
 
 /* Overlay for highlighting the selected tile. */
@@ -64,9 +77,69 @@ rect#overlay {
   pointer-events: none;
 }
 
+/* Keyboard focus for the link. */
+:focus {
+  outline: medium dashed black;
+}
+
 /***   Media Queries   ***/
 
-@media (max-width: 600px) {
+@media (min-width: 80em) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 100em) {
+  html {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 120em) {
+  html {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 140em) {
+  html {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 160em) {
+  html {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 64em) {
+  div#tooltip {
+    font-size: 0.9em;
+    padding: 0.6em;
+  }
+}
+
+@media (max-width: 50em) {
+  div#tooltip {
+    font-size: 0.8em;
+    padding: 0.5em;
+  }
+}
+
+@media (max-width: 43em) {
+  div#tooltip {
+    font-size: 0.7em;
+    padding: 0.4em;
+  }
+}
+
+@media (max-width: 37em) {
+  div#tooltip {
+    font-size: 0.6em;
+  }
+
   h1 {
     font-size: 2.5em;
   }
@@ -74,37 +147,18 @@ rect#overlay {
   header p {
     font-size: 1.2em;
   }
-
-  div#tooltip {
-    font-size: 0.9em;
-    padding: 0.6em;
-  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 32em) {
+  div#tooltip {
+    font-size: 0.5em;
+  }
+
   h1 {
     font-size: 2em;
   }
 
   header p {
     font-size: 1em;
-  }
-
-  div#tooltip {
-    font-size: 0.8em;
-    padding: 0.5em;
-  }
-}
-
-@media (max-width: 425px) {
-  div#tooltip {
-    font-size: 0.7em;
-    padding: 0.4em;
-  }
-}
-
-@media (max-width: 350px) {
-  div#tooltip {
-    font-size: 0.6em;
   }
 }
