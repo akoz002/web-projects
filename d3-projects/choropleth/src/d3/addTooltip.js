@@ -30,10 +30,15 @@ const addTooltip = eduMap => {
               eduMap.get(dataID);
 
         // position the tooltip
+        // tooltipX and tooltipY units are % of <svg> viewBox dimensions
         const mousePos = mouse(select('svg').node());
-        const tooltipX = Math.max(1,
-          Math.min((mousePos[0] / CANVAS_WIDTH * 100) - 7, 75));
-        const tooltipY = (mousePos[1] / CANVAS_HEIGHT * 100) - 14;
+        // shift to the right by 3% of <svg> viewBox width
+        const tooltipX = Math.min(
+          (mousePos[0] / CANVAS_WIDTH * 100) + 3,
+          80 // no more than 80% to the right
+        );
+        // shift upwards by 4% of <svg> viewBox height
+        const tooltipY = (mousePos[1] / CANVAS_HEIGHT * 100) - 4;
 
         select('#tooltip')
             .attr('data-education', bachelorsOrHigher)
