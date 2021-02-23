@@ -37,8 +37,11 @@ const addTooltip = () => {
         const dataTemp = cell.attributes['data-temp'].value;
 
         // position the tooltip
-        const tooltipX = (x / CANVAS_WIDTH * 100) - 3;
-        const tooltipY = (y - 2.5 * height) / CANVAS_HEIGHT * 100;
+        // tooltipX and tooltipY units are % of parent container dimensions
+        const tooltipX = x / CANVAS_WIDTH * 100;
+        // offset y by 4% of the height of the parent container
+        const tooltipY = (y / CANVAS_HEIGHT * 100) - 4;
+
         select('#tooltip')
             .attr('data-year', dataYear)
             .style('left', `${tooltipX}%`)
