@@ -50,8 +50,11 @@ const addTooltip = (canvasWidth, canvasHeight) => {
         const dataDate = rect.attributes['data-date'].value;
 
         // the tooltip box
-        const leftOffset = (x / canvasWidth * 100) - 6;
-        const topOffset = (y / canvasHeight * 100) - 17;
+        // leftOffset and topOffset units are % of parent container dimensions
+        const leftOffset = x / canvasWidth * 100;
+        // offset y by 5% of the height of the parent container
+        const topOffset = (y / canvasHeight * 100) - 5;
+
         select('#tooltip')
             .attr('data-date', dataDate)
             .style('left', `${leftOffset}%`)

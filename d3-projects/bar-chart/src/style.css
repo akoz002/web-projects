@@ -17,7 +17,6 @@ h1 {
 /* The main container holding the <svg> element. */
 main#svg-container {
   position: relative;
-  max-width: 1000px;
   margin: auto;
   background-color: lightpink;
   border: 1px solid darkmagenta;
@@ -25,8 +24,22 @@ main#svg-container {
   box-shadow: 0px 0px 1.25em 0.5em gray;
 }
 
+/* Fix the <svg> font-size to 16px (i.e. 16 user units) for correct
+   user unit sizes inside the <svg> viewBox. The viewBox will scale
+   correctly when resizing. */
+svg {
+  font-size: 16px;
+}
+
+footer {
+  font-size: 1.2em;
+}
+
 /* The tooltip box. */
 #tooltip {
+  font-size: 1.2em;
+  width: max-content;
+  transform: translate(-51%, -100%);
   padding: 0.625em;
   background-color: palevioletred;
   border: 1px solid darkmagenta;
@@ -52,37 +65,84 @@ main#svg-container {
   font-size: 2.2em;
 }
 
+/* Keyboard focus for the link. */
+:focus {
+  outline: medium dashed black;
+}
+
 /*************************/
 /***   Media Queries   ***/
 /*************************/
 
-@media (max-width: 800px) {
+@media (min-width: 80em) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 100em) {
+  html {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 120em) {
+  html {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 140em) {
+  html {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 160em) {
+  html {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 64em) {
+  #tooltip {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 56em) {
+  #tooltip {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 50em) {
   #tooltip {
     font-size: 0.9em;
     padding: 0.5em;
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 46em) {
   #tooltip {
     font-size: 0.8em;
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 42em) {
   #tooltip {
     font-size: 0.7em;
     padding: 0.4em;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 35em) {
   #tooltip {
     font-size: 0.6em;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   h1 {
     font-size: 2.5em;
   }
@@ -90,9 +150,13 @@ main#svg-container {
   #tooltip {
     font-size: 0.5em;
   }
+
+  footer {
+    font-size: 1.1em;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 25em) {
   h1 {
     font-size: 2em;
   }
