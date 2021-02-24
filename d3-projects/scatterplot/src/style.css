@@ -29,15 +29,21 @@ a:visited {
 /* The container housing the <svg> canvas. */
 main#svg-container {
   position: relative;
-  max-width: 1000px;
   margin: 1.5em auto;
   background-color: hsl(120, 100%, 10%);
   border: 3px solid honeydew;
   border-radius: 1.25em;
 }
 
-svg, footer {
-  font-size: 1rem;
+/* Fix the <svg> font-size to 16px (i.e. 16 user units) for correct
+   user unit sizes inside the <svg> viewBox. The viewBox will scale
+   correctly when resizing. */
+svg {
+  font-size: 16px;
+}
+
+footer {
+  font-size: 1.2rem;
 }
 
 /* Every plotted data circle. */
@@ -60,11 +66,11 @@ svg, footer {
 
 /* The legend box in the plot. */
 #legend {
-  font-size: 1.1em;
+  font-size: 1.2em;
   position: absolute;
   top: 0.8em;
-  left: 40%;
-  width: 11em;
+  left: 40.5%;
+  width: max-content;
   display: grid;
   grid-template-columns: 1em 1fr;
   grid-row-gap: 0.5em;
@@ -87,12 +93,14 @@ svg, footer {
 /* The tooltip box in the plot. */
 #tooltip {
   position: absolute;
+  width: max-content;
+  transform: translate(-25%, -100%);
   padding: 1em;
   color: white;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.65em;
-  line-height: 1.6em;
+  line-height: 1.6;
   text-align: left;
   pointer-events: none;
 }
@@ -102,11 +110,52 @@ svg, footer {
   pointer-events: none;
 }
 
+/* Keyboard focus for the link. */
+:focus {
+  outline: medium dotted white;
+}
+
 /*************************/
 /***   Media Queries   ***/
 /*************************/
 
-@media (max-width: 900px) {
+@media (min-width: 80em) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 100em) {
+  html {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 120em) {
+  html {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 140em) {
+  html {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 160em) {
+  html {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 64em) {
+  #legend {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 58em) {
   #legend {
     font-size: 1em;
     top: 0.7em;
@@ -118,7 +167,7 @@ svg, footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   #legend {
     font-size: 0.9em;
     top: 0.6em;
@@ -130,7 +179,7 @@ svg, footer {
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 44em) {
   #legend {
     font-size: 0.8em;
     top: 0.5em;
@@ -142,19 +191,25 @@ svg, footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 38em) {
+  /* Changing the body font-size affects the title, subtitle, legend and
+  tooltip. It does not affect the svg or the footer. */
   body {
     font-size: 0.9em;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 35em) {
   body {
     font-size: 0.8em;
   }
+
+  footer {
+    font-size: 1.1rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   h1 {
     font-size: 2.5em;
   }
@@ -170,7 +225,7 @@ svg, footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 25em) {
   h1 {
     font-size: 2em;
   }
@@ -184,11 +239,11 @@ svg, footer {
   }
 
   footer {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 22em) {
   #legend {
     font-size: 0.5em;
   }

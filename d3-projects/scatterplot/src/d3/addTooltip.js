@@ -37,9 +37,10 @@ const addTooltip = () => {
         const dataXValue = circle.attributes['data-xvalue'].value;
 
         // the tooltip box
-        const leftOffset = (cx / CANVAS_WIDTH * 100) - 6;
-        const topOffset = (cy / CANVAS_HEIGHT * 100) -
-              (d['Doping'] !== "" ? 39 : 29);
+        // leftOffset and topOffset units are % of parent container dimensions
+        const leftOffset = cx / CANVAS_WIDTH * 100;
+        // offset y by 5% of the height of the parent container
+        const topOffset = (cy / CANVAS_HEIGHT * 100) - 5;
 
         select('#tooltip')
             .attr('data-year', dataXValue)
